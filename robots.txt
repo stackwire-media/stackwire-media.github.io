@@ -1,4 +1,8 @@
 User-agent: *
 Allow: /
 
+# Allow ChatGPT Search to discover public Stackwire pages
+User-agent: OAI-SearchBot
+Allow: /
+
 Sitemap: https://stackwire-media.github.io/sitemap.xml
