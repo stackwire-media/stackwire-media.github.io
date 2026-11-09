@@ -3,255 +3,38 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Stackwire | Finance, crypto and software, written by people who work in it</title>
-<meta name="description" content="Stackwire publishes articles on finance and fintech, crypto and web3, and SaaS and AI. Submit a guest post with a backlink.">
+<title>Stackwire: Guest Posts on Finance, Crypto and SaaS</title>
+<meta name="description" content="Stackwire publishes expert articles on finance and fintech, crypto and web3, and SaaS and AI. Pitch us your article.">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="theme-color" content="#14213D">
+<link rel="canonical" href="https://stackwire-media.github.io/">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Stackwire">
+<meta property="og:title" content="Stackwire: Guest Posts on Finance, Crypto and SaaS">
+<meta property="og:description" content="Stackwire publishes expert articles on finance and fintech, crypto and web3, and SaaS and AI. Pitch us your article.">
+<meta property="og:url" content="https://stackwire-media.github.io/">
+<meta name="twitter:card" content="summary">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,500;6..72,700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
-<style>
-:root{
-  --paper:#F5F7FA; --ink:#14213D; --signal:#2457F5; --muted:#586174; --rule:#D8DFEA; --tint:#E7EDFF; --white:#fff;
-  --serif:"Newsreader",Georgia,"Times New Roman",serif;
-  --sans:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
-}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
-@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
-body{margin:0;background:var(--paper);color:var(--ink);font:400 17px/1.6 var(--sans)}
-a{color:inherit}
-a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:3px solid var(--signal);outline-offset:2px}
-.wrap{max-width:1040px;margin:0 auto;padding:0 24px}
-header{border-bottom:1px solid var(--rule)}
-header .wrap{display:flex;align-items:center;justify-content:space-between;padding-top:18px;padding-bottom:18px;gap:16px;flex-wrap:wrap}
-.logo{font:700 26px/1 var(--serif);text-decoration:none;letter-spacing:-.01em}
-nav{display:flex;gap:22px;flex-wrap:wrap;font-size:15px}
-nav a{text-decoration:none;color:var(--muted)}
-nav a:hover{color:var(--ink)}
-nav a.cta{color:var(--white);background:var(--ink);padding:7px 14px;border-radius:4px}
-nav a.cta:hover{background:var(--signal)}
-
-.hero{padding:72px 0 56px}
-h1{font:700 clamp(36px,6vw,64px)/1.05 var(--serif);letter-spacing:-.02em;margin:0 0 20px;max-width:15em}
-.lede{font-size:19px;color:var(--muted);max-width:34em;margin:0 0 28px}
-.topics{display:flex;gap:10px;flex-wrap:wrap}
-.topics a{border:1px solid var(--ink);border-radius:999px;padding:7px 16px;text-decoration:none;font-weight:500;font-size:15px}
-.topics a:hover{background:var(--ink);color:var(--white)}
-
-section{padding:56px 0;border-top:1px solid var(--rule)}
-h2{font:700 clamp(28px,4vw,38px)/1.15 var(--serif);margin:0 0 8px;letter-spacing:-.01em}
-.sub{color:var(--muted);margin:0 0 32px;max-width:36em}
-
-.posts{list-style:none;margin:0;padding:0}
-.posts li{display:grid;grid-template-columns:150px 1fr;gap:20px;padding:20px 0;border-bottom:1px solid var(--rule)}
-.posts li:first-child{border-top:1px solid var(--rule)}
-.tag{font-size:14px;font-weight:600;color:var(--signal)}
-.posts h3{font:700 22px/1.25 var(--serif);margin:0 0 4px}
-.posts h3 a{text-decoration:none}
-.posts h3 a:hover{text-decoration:underline}
-.posts p{margin:0;color:var(--muted);font-size:15px}
-.note{font-size:14px;color:var(--muted);margin-top:14px}
-
-.plans{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border:1px solid var(--ink);background:var(--white)}
-.plan{padding:28px 24px;border-right:1px solid var(--rule)}
-.plan:last-child{border-right:0}
-.plan.best{background:var(--tint)}
-.plan h3{font:700 22px/1.2 var(--serif);margin:0 0 4px}
-.price{font:700 40px/1.1 var(--serif);margin:10px 0 14px}
-.price small{font:400 15px var(--sans);color:var(--muted)}
-.plan ul{margin:0;padding-left:18px;font-size:15px}
-.plan li{margin:6px 0}
-
-.rules{display:grid;grid-template-columns:1fr 1fr;gap:40px;margin-top:48px}
-.rules h3{font:700 22px/1.2 var(--serif);margin:0 0 10px}
-.rules ul{margin:0;padding-left:18px;font-size:15px}
-.rules li{margin:6px 0}
-
-form{display:grid;grid-template-columns:1fr 1fr;gap:18px;max-width:760px}
-label{display:flex;flex-direction:column;gap:6px;font-weight:500;font-size:15px}
-.full{grid-column:1/-1}
-input,select,textarea{font:400 16px var(--sans);padding:11px 12px;border:1px solid #9AA5B8;border-radius:4px;background:var(--white);color:var(--ink)}
-textarea{min-height:120px;resize:vertical}
-button{font:600 16px var(--sans);background:var(--signal);color:var(--white);border:0;padding:13px 24px;border-radius:4px;cursor:pointer;justify-self:start}
-button:hover{background:var(--ink)}
-
-footer{border-top:1px solid var(--rule);padding:32px 0 48px;color:var(--muted);font-size:14px}
-footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
-footer a{margin-right:16px}
-
-@media (max-width:760px){
-  .hero{padding:48px 0 36px}
-  .posts li{grid-template-columns:1fr;gap:4px}
-  .plans{grid-template-columns:1fr}
-  .plan{border-right:0;border-bottom:1px solid var(--rule)}
-  .plan:last-child{border-bottom:0}
-  .rules,form{grid-template-columns:1fr}
-}
-</style>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Organization", "@id": "https://stackwire-media.github.io/#org", "name": "Stackwire", "url": "https://stackwire-media.github.io/", "description": "Stackwire publishes expert articles on finance and fintech, crypto and web3, and SaaS and AI. Pitch us your article."}, {"@type": "WebSite", "@id": "https://stackwire-media.github.io/#site", "name": "Stackwire", "url": "https://stackwire-media.github.io/", "publisher": {"@id": "https://stackwire-media.github.io/#org"}, "inLanguage": "en"}, {"@type": "WebPage", "@id": "https://stackwire-media.github.io/#page", "url": "https://stackwire-media.github.io/", "name": "Stackwire: Guest Posts on Finance, Crypto and SaaS", "isPartOf": {"@id": "https://stackwire-media.github.io/#site"}, "about": ["Finance and fintech", "Crypto and web3", "SaaS and AI"]}]}</script>
 </head>
 <body>
-
-<header>
-  <div class="wrap">
-    <a class="logo" href="#top">Stackwire</a>
-    <nav aria-label="Main">
-      <a href="#finance">Finance</a>
-      <a href="#crypto">Crypto</a>
-      <a href="#saas">SaaS and AI</a>
-      <a href="#write" class="cta">Write for us</a>
-    </nav>
-  </div>
-</header>
-
+<a class="skip" href="#top">Skip to content</a>
+<header><div class="wrap">
+<nav class="topnav" aria-label="Main"><a href="index.html" aria-current="page">Home</a><a href="finance.html">Finance</a><a href="crypto.html">Crypto</a><a href="saas-ai.html">SaaS and AI</a><a href="about.html">About</a><a href="write-for-us.html">Write for us</a></nav>
+<div class="brandrow"><a class="wordmark" href="index.html" aria-label="Stackwire home"><span>STACK</span>WIRE</a>
+<form class="search" action="https://www.google.com/search" method="get" role="search"><input type="search" name="q" placeholder="Search articles" aria-label="Search articles"><input type="hidden" name="as_sitesearch" value="stackwire-media.github.io"></form></div>
+</div></header>
 <main id="top">
-  <div class="wrap hero">
-    <h1>Finance, crypto and software, written by people who work in it.</h1>
-    <p class="lede">Stackwire publishes practical articles for founders, investors and operators. Experts and brands can contribute a guest post and earn a link back to their site.</p>
-    <div class="topics">
-      <a href="#finance">Finance and fintech</a>
-      <a href="#crypto">Crypto and web3</a>
-      <a href="#saas">SaaS and AI</a>
-    </div>
-  </div>
-
-  <section id="latest">
-    <div class="wrap">
-      <h2>Latest articles</h2>
-      <p class="sub">Sample headlines. Replace these with your own articles before you launch.</p>
-      <ul class="posts">
-        <li id="finance">
-          <span class="tag">Finance and fintech</span>
-          <div><h3><a href="#">How embedded finance is changing small business lending</a></h3><p>Why software platforms are becoming the new front door for credit.</p></div>
-        </li>
-        <li>
-          <span class="tag">Finance and fintech</span>
-          <div><h3><a href="#">What to check before choosing a payment processor</a></h3><p>Fees, payout speed and chargeback rules, compared in plain terms.</p></div>
-        </li>
-        <li id="crypto">
-          <span class="tag">Crypto and web3</span>
-          <div><h3><a href="#">How to vet a crypto project before you write about it</a></h3><p>A short checklist for team, product, audits and token structure.</p></div>
-        </li>
-        <li>
-          <span class="tag">Crypto and web3</span>
-          <div><h3><a href="#">Stablecoin regulation: what founders need to know in 2026</a></h3><p>The main rules in the US, UK and EU, and what they mean for builders.</p></div>
-        </li>
-        <li id="saas">
-          <span class="tag">SaaS and AI</span>
-          <div><h3><a href="#">Pricing an AI feature without losing your margins</a></h3><p>Usage-based, seat-based or hybrid: how to choose and test.</p></div>
-        </li>
-        <li>
-          <span class="tag">SaaS and AI</span>
-          <div><h3><a href="#">Reducing churn in B2B SaaS: five fixes that work</a></h3><p>Onboarding, support and billing changes with the biggest effect.</p></div>
-        </li>
-      </ul>
-      <p class="note">Sponsored articles are always labeled as sponsored.</p>
-    </div>
-  </section>
-
-  <section id="write">
-    <div class="wrap">
-      <h2>Write for Stackwire</h2>
-      <p class="sub">Publish an original article on our site with a link to yours. Every submission is reviewed by an editor, and we turn down posts that do not meet our standards.</p>
-
-      <div class="plans">
-        <div class="plan">
-          <h3>Standard</h3>
-          <div class="price">$80 <small>per post</small></div>
-          <ul>
-            <li>800 words or more</li>
-            <li>1 link to your site</li>
-            <li>Author bio</li>
-            <li>Published in 5 to 7 days</li>
-          </ul>
-        </div>
-        <div class="plan best">
-          <h3>Featured</h3>
-          <div class="price">$150 <small>per post</small></div>
-          <ul>
-            <li>1,200 words or more</li>
-            <li>2 links to your site</li>
-            <li>Homepage placement for 7 days</li>
-            <li>Published in 3 to 5 days</li>
-          </ul>
-        </div>
-        <div class="plan">
-          <h3>We write it</h3>
-          <div class="price">$220 <small>per post</small></div>
-          <ul>
-            <li>Written by our editors</li>
-            <li>1,000 words, researched</li>
-            <li>1 link to your site</li>
-            <li>Published in 7 to 10 days</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="rules">
-        <div>
-          <h3>What we publish</h3>
-          <ul>
-            <li>Original articles that teach something useful</li>
-            <li>Finance and fintech, crypto and web3, SaaS and AI</li>
-            <li>A real author name and a short bio</li>
-            <li>Links to relevant, trustworthy pages</li>
-          </ul>
-        </div>
-        <div>
-          <h3>What we reject</h3>
-          <ul>
-            <li>Copied or AI-generated filler</li>
-            <li>Guaranteed returns or "buy now" language</li>
-            <li>Anonymous projects, scams and meme coin promotions</li>
-            <li>Casino, adult, loan and pharma links</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="submit">
-    <div class="wrap">
-      <h2>Submit your article or pitch</h2>
-      <p class="sub">Send your details and a link to your draft, or tell us your topic. We reply within 2 working days with approval and payment details.</p>
-      <!-- Replace YOUR_FORM_ID with your Formspree form ID (formspree.io) -->
-      <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-        <label>Your name<input name="name" required autocomplete="name"></label>
-        <label>Email<input type="email" name="email" required autocomplete="email"></label>
-        <label>Website you want to link to<input type="url" name="website" placeholder="https://" required></label>
-        <label>Topic area
-          <select name="niche" required>
-            <option value="">Choose one</option>
-            <option>Finance and fintech</option>
-            <option>Crypto and web3</option>
-            <option>SaaS and AI</option>
-          </select>
-        </label>
-        <label>Package
-          <select name="package" required>
-            <option value="">Choose one</option>
-            <option>Standard</option>
-            <option>Featured</option>
-            <option>We write it</option>
-          </select>
-        </label>
-        <label>Article title<input name="title"></label>
-        <label class="full">Link to your draft, or a short pitch<textarea name="message" required></textarea></label>
-        <button type="submit">Send submission</button>
-      </form>
-    </div>
-  </section>
+<div class="wrap trend" aria-label="Trending"><a href="pricing-ai-features-saas.html">Pricing AI features <em>NEW</em></a><a href="stablecoin-rules-us-founders.html">US stablecoin rules <em>NEW</em></a><a href="choosing-a-payment-processor.html">Choosing a payment processor <em>NEW</em></a><a href="write-for-us.html">Publish your article</a></div>
+<div class="wrap intro"><h1>Finance, crypto and software, written by people who work in it.</h1><p>Practical guides for founders, investors and operators. Experts can contribute a guest post.</p></div>
+<div class="wrap feat"><a class="card big bg-saas" href="pricing-ai-features-saas.html"><span class="pill">SaaS and AI</span><h2>How to price an AI feature without losing your margins</h2><p>Seat-based pricing breaks when AI costs scale with usage. Learn the hybrid model most SaaS teams use, with a worked example and a five-step checklist.</p><small>6 Nov 2026</small></a><a class="card bg-crypto" href="stablecoin-rules-us-founders.html"><span class="pill">Crypto and web3</span><h2>US stablecoin rules: what founders need to know in 2026</h2><small>6 Nov 2026</small></a><a class="card bg-finance" href="choosing-a-payment-processor.html"><span class="pill">Finance and fintech</span><h2>Flat-rate or interchange-plus: how to choose a payment processor</h2><small>6 Nov 2026</small></a></div>
+<div class="wrap tiles"><a class="tile t-fin" href="finance.html"><i>Finance and fintech</i><b>Payments, lending and regulation</b></a><a class="tile t-cry" href="crypto.html"><i>Crypto and web3</i><b>Stablecoins, tokens and compliance</b></a><a class="tile t-saas" href="saas-ai.html"><i>SaaS and AI</i><b>Pricing, growth and AI products</b></a><a class="tile t-write" href="write-for-us.html"><i>Contributors</i><b>Write for Stackwire and share your expertise</b></a></div>
+<section id="latest"><div class="wrap"><h2>Latest articles</h2><p class="sub">Practical guides for founders, investors and operators.</p><ul class="posts"><li><span class="tag">SaaS and AI</span><div><h3><a href="pricing-ai-features-saas.html">How to price an AI feature without losing your margins</a></h3><p>Seat-based pricing breaks when AI costs scale with usage. Learn the hybrid model most SaaS teams use, with a worked example and a five-step checklist.</p></div></li><li><span class="tag">Crypto and web3</span><div><h3><a href="stablecoin-rules-us-founders.html">US stablecoin rules: what founders need to know in 2026</a></h3><p>The GENIUS Act is moving from law to practice. Here is where the rules stand after the OCC’s final rule, what issuers must do, and a five-point check for founders.</p></div></li><li><span class="tag">Finance and fintech</span><div><h3><a href="choosing-a-payment-processor.html">Flat-rate or interchange-plus: how to choose a payment processor</a></h3><p>Compare flat-rate and interchange-plus pricing, see a worked example at $50,000 a month, and use a checklist covering payouts, holds and chargebacks.</p></div></li></ul><div class="box"><p>Have expertise to share? <a href="write-for-us.html">Write for Stackwire</a> and publish your own article.</p></div></div></section>
 </main>
-
-<footer>
-  <div class="wrap">
-    <div>
-      <a href="#write">Write for us</a>
-      <a href="#">About</a>
-      <a href="#">Contact</a>
-      <a href="#">Privacy</a>
-    </div>
-    <div>Content on Stackwire is for information only and is not financial advice.</div>
-  </div>
-</footer>
-
+<footer><div class="wrap"><div><a href="about.html">About</a><a href="contact.html">Contact</a><a href="privacy.html">Privacy</a><a href="write-for-us.html">Write for us</a></div><div>Content on Stackwire is for information only and is not financial, legal or investment advice.</div></div></footer>
 </body>
 </html>
