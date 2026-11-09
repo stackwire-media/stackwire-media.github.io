@@ -19,7 +19,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "How to price an AI feature without losing your margins", "description": "Seat-based pricing breaks when AI costs scale with usage. Learn the hybrid model most SaaS teams use, with a worked example and a five-step checklist.", "datePublished": "2026-11-06", "dateModified": "2026-11-06", "inLanguage": "en", "mainEntityOfPage": "https://stackwire-media.github.io/pricing-ai-features-saas.html", "url": "https://stackwire-media.github.io/pricing-ai-features-saas.html", "articleSection": "SaaS and AI", "author": {"@type": "Organization", "name": "Stackwire Editorial", "url": "https://stackwire-media.github.io/"}, "publisher": {"@type": "Organization", "name": "Stackwire", "url": "https://stackwire-media.github.io/"}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "How to price an AI feature without losing your margins", "description": "Seat-based pricing breaks when AI costs scale with usage. Learn the hybrid model most SaaS teams use, with a worked example and a five-step checklist.", "datePublished": "2026-11-06", "dateModified": "2026-11-09", "inLanguage": "en", "mainEntityOfPage": "https://stackwire-media.github.io/pricing-ai-features-saas.html", "url": "https://stackwire-media.github.io/pricing-ai-features-saas.html", "articleSection": "SaaS and AI", "author": {"@type": "Organization", "name": "Stackwire Editorial", "url": "https://stackwire-media.github.io/"}, "publisher": {"@type": "Organization", "name": "Stackwire", "url": "https://stackwire-media.github.io/"}}</script>
 </head>
 <body>
 <a class="skip" href="#top">Skip to content</a>
@@ -32,7 +32,7 @@
 <article class="wrap art">
 <p class="tag">SaaS and AI</p>
 <h1>How to price an AI feature without losing your margins</h1>
-<p class="meta">By Stackwire Editorial. Published 6 November 2026.</p>
+<p class="meta">By Stackwire Editorial. Published 6 November 2026. Updated 9 November 2026.</p>
 <p class="lede">Classic SaaS had predictable costs. AI does not: every request you serve has a model bill behind it. Here is how to price an AI feature so heavy users do not eat your margin.</p>
 <div class="answer"><strong>Quick answer</strong><p>A practical way to price an AI feature is a hybrid plan: charge a base subscription, include a defined amount of AI usage, then charge for usage above that allowance. Measure your real cost per task first, and make usage visible so customers are not surprised.</p></div>
 <h2>Why seats alone fall short</h2>
@@ -43,8 +43,54 @@
 <p>Say one AI task costs you $0.04 in model fees. A customer running 500 tasks a month costs you $20, and one running 5,000 costs you $200. If both pay the same $30 seat, the second is a loss. Include 500 tasks in the plan and charge, say, $0.08 for each extra task, and the heavy user pays for what they use.</p>
 <h2>Five steps</h2>
 <ol><li>Measure your real cost per task, including retries and long inputs.</li><li>Decide what is included in each tier so AI feels part of the product.</li><li>Set an allowance that covers most customers and meter the rest.</li><li>Show usage inside the app so overages never surprise anyone.</li><li>Review prices every quarter, because model costs and customer habits change fast.</li></ol>
-<p class="note">The numbers above are examples, not benchmarks. Use your own cost data.</p>
-<aside class="srcs"><h2>Sources</h2><ul><li><a href="https://www.oliverwyman.com/our-expertise/insights/2026/oct/managing-ai-pricing-transition-beyond-seats.html" rel="noopener">Managing the AI pricing transition (Oliver Wyman)</a></li><li><a href="https://www.paddle.com/blog/ai-has-rewritten-the-pricing-playbook-fltr" rel="noopener">AI has rewritten the pricing playbook (Paddle)</a></li><li><a href="https://www.solvimon.com/blog/hybrid-pricing-is-the-default-now-heres-the-data" rel="noopener">Hybrid pricing is the default now (Solvimon)</a></li><li><a href="https://www.getmonetizely.com/articles/the-beginners-cheat-sheet-to-ai-pricing-models-in-2026-e4939" rel="noopener">AI pricing models in 2026 (Monetizely)</a></li></ul></aside>
+
+<h2>Which AI SaaS pricing model should you choose?</h2>
+<p>There is no single best AI pricing model. Choose the unit that customers can understand and that tracks your cost driver closely enough to protect the business. A product that summarizes one short email has a different cost profile from an agent that searches documents, calls tools and runs several model steps.</p>
+<table><thead><tr><th>Model</th><th>Works well when</th><th>Main risk</th></tr></thead><tbody>
+<tr><td>Per seat</td><td>Usage is light and similar across users, or AI is a supporting feature.</td><td>A few power users can consume far more resources than the average seat.</td></tr>
+<tr><td>Usage-based</td><td>Customers can connect usage directly to value, such as API calls or documents processed.</td><td>Unpredictable bills can make buyers hesitant.</td></tr>
+<tr><td>Credits</td><td>Different actions have different costs and customers need a visible allowance.</td><td>Opaque credit conversion can frustrate customers if the unit is hard to understand.</td></tr>
+<tr><td>Hybrid</td><td>You want a predictable subscription plus a usage allowance and paid overages.</td><td>Allowance size and overage rules need careful design.</td></tr>
+<tr><td>Outcome-based</td><td>The result can be measured and attributed reliably, such as a verified workflow completed.</td><td>Disputes arise when success criteria or attribution are unclear.</td></tr>
+</tbody></table>
+<p>For many early products, a hybrid structure is a sensible starting hypothesis, not a universal industry rule. It gives customers a known base price while letting the business meter unusually heavy usage. Validate it with customer interviews and actual cost data.</p>
+<h2>Calculate gross margin before setting the allowance</h2>
+<p>Start with the full variable cost of one successful task. Include model calls, retrieval or search, third-party tools, storage or compute that scales with usage, retries and human review where it is part of normal delivery. Our guide to <a href="calculating-ai-api-costs.html">calculating AI API costs</a> explains how to measure the model portion.</p>
+<p>For a simple illustration, assume a plan costs $30 per month, includes 500 completed AI tasks, and each task costs $0.04 in variable AI charges. The included usage costs $20, leaving $10 before payment fees, support, hosting, sales and other operating costs. This is not a 33% company gross margin calculation because it excludes those other costs.</p>
+<p>If the customer completes 5,000 tasks, the extra 4,500 tasks cost $180 at the same assumed unit cost. If overage is $0.08 per task, the customer pays another $360 and the total plan revenue is $390. Against $200 of assumed AI cost, $190 remains before all other costs. This shows why the included allowance and overage price must be tested together.</p>
+<h2>How to choose an allowance</h2>
+<ol>
+<li><b>Measure a real usage distribution.</b> Use several weeks of representative product data if you have it. Look at median usage and heavy-use percentiles, not only the average.</li>
+<li><b>Segment customers by job.</b> A support team, a solo founder and an agency may use the same feature very differently.</li>
+<li><b>Set an allowance around a customer outcome.</b> “500 document summaries” is easier to understand than an unexplained bucket of 40,000 tokens.</li>
+<li><b>Model the high-usage case.</b> Check whether a customer who uses the full allowance plus overages remains commercially viable.</li>
+<li><b>Revisit the unit when the product changes.</b> A new agent workflow or longer context window can change cost per task.</li>
+</ol>
+<h2>Make AI usage understandable inside the product</h2>
+<p>Show customers what counts as a task, how much of their allowance remains, when it resets and what happens after they reach the limit. Send a warning before an overage begins. Offer a way to set a spend cap or pause optional AI work where practical. If you use credits, publish a simple conversion table and explain whether failed tasks consume credits.</p>
+<p>Do not quietly change the value of a credit or the definition of a completed task. Pricing is part of the product experience. Confusing billing can erase the trust created by a useful AI feature.</p>
+<h2>Test the price with customer evidence</h2>
+<p>Ask potential buyers how they budget for the problem today, what outcome would justify paying more, and whether they prefer a predictable monthly allowance or a bill tied to usage. Test a few clear packages rather than asking “what would you pay?” in the abstract. Compare conversion, activation, usage, expansion, churn and support tickets after launch.</p>
+<p>Track contribution margin by customer cohort. If the most engaged customers are also the least profitable, you may have a pricing or product-efficiency problem. If customers rarely reach the allowance, the package may be too generous or the feature may not be valuable enough to drive usage.</p>
+<h2>Common AI pricing mistakes</h2>
+<ul>
+<li><b>Pricing from model token rates alone:</b> model fees are only one part of delivering a reliable feature.</li>
+<li><b>Calling usage unlimited:</b> this creates open-ended exposure when a workflow can loop or be automated.</li>
+<li><b>Charging for tokens customers cannot interpret:</b> expose a meaningful product unit where possible.</li>
+<li><b>Ignoring quality:</b> the cheapest model may create more retries, corrections or support costs.</li>
+<li><b>Changing limits without warning:</b> explain plan changes and give customers time to adapt.</li>
+</ul>
+<h2>Frequently asked questions</h2>
+<h3>Should AI features be priced per user or per usage?</h3>
+<p>Use per-seat pricing when usage is relatively predictable and the feature is included in the value of the seat. Use usage pricing when cost or customer value rises directly with activity. A hybrid model can combine a base subscription with an included allowance and transparent overages.</p>
+<h3>How much should I charge for an AI feature?</h3>
+<p>There is no reliable universal price. Calculate cost per successful task, understand how much customers value the outcome, then test a price that covers variable costs and contributes to the rest of the business. Validate with real usage and willingness-to-pay evidence.</p>
+<h3>Are AI credits better than tokens?</h3>
+<p>Credits can make billing easier when different AI actions have different costs. Tokens are more transparent to technical buyers but can be difficult for non-technical customers to predict. If you use credits, explain exactly how each action consumes them.</p>
+<h3>Can I offer unlimited AI usage?</h3>
+<p>Only if you have evidence that the cost distribution is predictable and the plan remains profitable under heavy use. Otherwise, set a fair-use policy, allowance, usage cap or overage structure that customers can understand.</p>
+<p class="note">All figures in the examples are illustrative, not market benchmarks. Use your own cost data and test assumptions with customers.</p>
+<aside class="srcs"><h2>Sources</h2><ul><li><a href="https://www.paddle.com/resources/saas-pricing-strategy" rel="noopener">SaaS pricing strategy resources (Paddle)</a></li><li><a href="https://developers.openai.com/api/docs/pricing" rel="noopener">OpenAI API pricing</a> — use current model rates when estimating variable costs.</li><li><a href="https://platform.claude.com/docs/en/about-claude/pricing" rel="noopener">Anthropic API pricing</a> — model, caching and batch pricing details.</li><li><a href="https://www.solvimon.com/blog/hybrid-pricing-is-the-default-now-heres-the-data" rel="noopener">Hybrid pricing is the default now (Solvimon)</a></li><li><a href="https://www.getmonetizely.com/articles/the-beginners-cheat-sheet-to-ai-pricing-models-in-2026-e4939" rel="noopener">AI pricing models in 2026 (Monetizely)</a></li></ul></aside>
 <div class="box"><p>Have expertise to share? <a href="write-for-us.html">Write for Stackwire</a> and publish your own article.</p></div>
 </article>
 </main>
