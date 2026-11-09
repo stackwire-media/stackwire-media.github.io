@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Payment Gateway vs Payment Processor: What's the Difference? | Stackwire</title>
+<meta name="description" content="Learn the difference between a payment gateway and payment processor, how an online card payment works, what a PSP does, and what businesses should compare.">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="theme-color" content="#14213D">
+<link rel="canonical" href="https://stackwire-media.github.io/payment-gateway-vs-payment-processor.html">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Stackwire">
+<meta property="og:title" content="Payment Gateway vs Payment Processor: What's the Difference? | Stackwire">
+<meta property="og:description" content="A practical guide to payment gateways, processors, PSPs and the steps behind an online card payment.">
+<meta property="og:url" content="https://stackwire-media.github.io/payment-gateway-vs-payment-processor.html">
+<meta name="twitter:card" content="summary">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Payment Gateway vs Payment Processor: What's the Difference?","description":"A practical guide to payment gateways, processors, PSPs and the steps behind an online card payment.","datePublished":"2026-11-09","dateModified":"2026-11-09","inLanguage":"en","mainEntityOfPage":"https://stackwire-media.github.io/payment-gateway-vs-payment-processor.html","url":"https://stackwire-media.github.io/payment-gateway-vs-payment-processor.html","articleSection":"Finance and fintech","author":{"@type":"Organization","name":"Stackwire Editorial","url":"https://stackwire-media.github.io/about.html"},"publisher":{"@type":"Organization","name":"Stackwire","url":"https://stackwire-media.github.io/"}}</script>
+</head>
+<body>
+<a class="skip" href="#top">Skip to content</a>
+<header><div class="wrap">
+<nav class="topnav" aria-label="Main"><a href="index.html">Home</a><a href="finance.html" aria-current="page">Finance</a><a href="crypto.html">Crypto</a><a href="saas-ai.html">SaaS and AI</a><a href="about.html">About</a><a href="write-for-us.html">Write for us</a></nav>
+<div class="brandrow"><a class="wordmark" href="index.html" aria-label="Stackwire home"><span>STACK</span>WIRE</a>
+<form class="search" action="search.html" method="get" role="search"><input type="search" name="q" placeholder="Search articles" aria-label="Search articles" required><button type="submit" class="search-submit">Search</button></form></div>
+</div></header>
+<main id="top">
+<article class="wrap art">
+<p class="tag">Finance and fintech</p>
+<h1>Payment gateway vs payment processor: what's the difference?</h1>
+<p class="meta">By Stackwire Editorial. Published 9 November 2026.</p>
+<p class="lede">A payment gateway securely captures and passes payment details. A payment processor handles the transaction communications that help move a payment through banks and card networks. Many modern providers bundle both jobs, which is why the terms are often confused.</p>
+<div class="answer"><strong>Quick answer</strong><p>A gateway is the secure connection between a checkout and the payment system. A processor carries out the transaction-processing work behind the scenes, including communicating with the relevant financial institutions and networks. A business may buy these services separately or use one payment service provider (PSP) that combines them. The exact division of responsibilities depends on the provider and payment method.</p></div>
+
+<h2>What is a payment gateway?</h2>
+<p>A <b>payment gateway</b> is the technology that securely collects or receives payment details at checkout and sends the transaction information to the next part of the payment system. For an online store, it connects the website or app to the payment provider. In a physical shop, a point-of-sale terminal and its software perform a related role.</p>
+<p>Think of the gateway as the secure entrance and routing layer. It helps transmit the payment request, and may support features such as hosted checkout pages, tokenization, payment-method selection and connections to more than one processor. The features included vary by provider; a gateway is not automatically a complete fraud, compliance or payment-management solution.</p>
+
+<h2>What is a payment processor?</h2>
+<p>A <b>payment processor</b> handles the technical work involved in routing and processing a payment through the payment ecosystem. For a card transaction, this can include communicating with the acquiring side, card network and issuing bank, receiving the authorization response, and supporting clearing and settlement processes.</p>
+<p>The processor is part of a wider chain. The customer's bank (the <b>issuer</b>) decides whether to approve or decline the authorization request. The merchant's acquiring bank or acquirer provides the merchant's connection to the card system and receives transaction funds for settlement. The processor helps these parties exchange the information needed to complete the transaction.</p>
+
+<h2>Payment gateway vs payment processor: key differences</h2>
+<table><thead><tr><th>Area</th><th>Payment gateway</th><th>Payment processor</th></tr></thead><tbody>
+<tr><td>Main role</td><td>Securely captures and transmits payment details from checkout</td><td>Routes and processes transaction messages through the payment system</td></tr>
+<tr><td>Where it sits</td><td>Close to the website, app or point-of-sale checkout</td><td>Behind the checkout, connected to acquirers, networks and banks</td></tr>
+<tr><td>Typical functions</td><td>Checkout connection, data transmission, tokenization or hosted payment fields, depending on provider</td><td>Authorization routing, transaction processing and support for clearing and settlement</td></tr>
+<tr><td>What it does not automatically mean</td><td>It is not necessarily the acquirer or the company holding merchant funds</td><td>It is not necessarily the checkout interface the customer sees</td></tr>
+<tr><td>How businesses buy it</td><td>Separately or bundled into a broader payment platform</td><td>Separately or bundled with gateway, acquiring and other services</td></tr>
+</tbody></table>
+<p><b>Important:</b> these are functional distinctions, not a universal map of every provider's product. Some providers use the word “processor” broadly, while others describe a full-stack platform as a PSP. Always check the actual service agreement and technical documentation rather than relying on the product label alone.</p>
+
+<h2>How an online card payment works</h2>
+<p>Here is a simplified view of a typical online card payment. The exact message flow differs by provider, region, card scheme and checkout setup.</p>
+<ol>
+<li><b>The customer checks out.</b> They enter card details or choose a saved payment method on the merchant's website or app.</li>
+<li><b>The gateway securely handles the payment data.</b> It sends the payment request to the payment platform or processor. Hosted fields and tokenization can help reduce how much raw card data the merchant's systems handle.</li>
+<li><b>The processor routes the authorization request.</b> The request travels through the acquiring side and card network to the cardholder's issuing bank.</li>
+<li><b>The issuer makes an authorization decision.</b> The bank approves or declines based on its checks, available credit or funds, risk signals and other rules.</li>
+<li><b>The response returns to checkout.</b> The response travels back through the payment chain so the merchant can show the customer whether the payment was approved.</li>
+<li><b>Capture, clearing and settlement follow.</b> Depending on the transaction, the merchant captures the authorized payment. The transaction is then cleared and funds are settled through the relevant financial institutions according to their schedules and terms.</li>
+</ol>
+<p>An authorization is not the same as money arriving in the merchant's bank account. A payment can be approved first and settled later. Some businesses capture immediately; others authorize first and capture when an order ships or a service is delivered.</p>
+
+<h2>Where does a payment service provider (PSP) fit?</h2>
+<p>A <b>payment service provider</b>, often shortened to PSP, offers a broader package that can combine gateway technology, processing, acquiring connections, payment methods, risk tools, reporting and merchant onboarding. The exact bundle differs between providers.</p>
+<p>This is why a business using one integrated platform may not need to contract with a separate gateway and processor. The provider may manage several layers behind one API, dashboard and commercial agreement. That does not mean the gateway and processor have become the same technical function; it means the business is buying a bundled service.</p>
+
+<h2>Do you need both a gateway and a processor?</h2>
+<p>If you accept online card payments, the payment flow needs a way to collect and transmit payment details and a way to process the transaction through the payment system. But you do not necessarily need to select or manage two separate vendors.</p>
+<ul>
+<li><b>Small online store:</b> an all-in-one PSP can be simpler to integrate and operate.</li>
+<li><b>Established ecommerce business:</b> a separate gateway may make sense if it offers routing flexibility, existing integrations or control over the checkout experience.</li>
+<li><b>Marketplace or platform:</b> evaluate connected accounts, split payments, seller onboarding, payout controls and responsibility for disputes.</li>
+<li><b>Multi-country business:</b> check local acquiring, supported payment methods, settlement currencies, cross-border fees and regulatory requirements in each market.</li>
+</ul>
+<p>Do not choose based on the label alone. Map the services your business actually needs and identify which provider is responsible for each one.</p>
+
+<h2>What should you compare before choosing a provider?</h2>
+<p>The gateway-versus-processor distinction explains the architecture. It does not tell you which provider is the better commercial choice. Compare the full operating cost and the parts of the payment experience that affect your customers.</p>
+<table><thead><tr><th>What to compare</th><th>Questions to ask</th></tr></thead><tbody>
+<tr><td>Total fees</td><td>What are the percentage and fixed transaction fees, monthly charges, gateway fees, cross-border costs, currency conversion charges and dispute fees?</td></tr>
+<tr><td>Payment methods</td><td>Does it support the cards, wallets, bank payments and local methods your customers actually use?</td></tr>
+<tr><td>Authorization performance</td><td>Can it help improve approval rates with network tokens, account updater tools or intelligent routing? Ask how performance is measured.</td></tr>
+<tr><td>Security and compliance</td><td>Which party handles card-data security responsibilities, tokenization, authentication and PCI DSS requirements? Confirm your own obligations.</td></tr>
+<tr><td>Integration</td><td>Are there reliable APIs, plugins, test environments, webhooks and documentation for your platform?</td></tr>
+<tr><td>Settlement and cash flow</td><td>When are funds paid out? Are reserves, rolling holds, payout minimums or settlement delays possible under the contract?</td></tr>
+<tr><td>Disputes and support</td><td>Who provides evidence tools, chargeback notifications and support when a payment fails or is disputed?</td></tr>
+<tr><td>Exit and portability</td><td>Can you export customer tokens or payment records where permitted? What happens if you change providers?</td></tr>
+</tbody></table>
+
+<h2>Example: choosing between separate services and an all-in-one PSP</h2>
+<p>Imagine a growing online retailer that already uses a checkout platform but wants to change how card payments are routed. It could keep its current gateway and connect a different processor, if the contracts and integrations support that setup. Alternatively, it could move to a PSP that bundles checkout, processing and acquiring services.</p>
+<p>The separate setup may offer more flexibility or preserve an existing checkout, but it can mean more integrations, contracts and support handoffs. The bundled option may simplify operations, but the retailer should check whether it can use the payment methods, routing controls, reporting and commercial terms it needs.</p>
+<p>There is no universal winner. Compare the total cost, approval performance, operational workload and ability to change providers. For a related breakdown of pricing models, read <a href="choosing-a-payment-processor.html">how to choose a payment processor</a>.</p>
+
+<h2>Common misconceptions</h2>
+<ul>
+<li><b>“The gateway moves the money.”</b> Usually, the gateway's core role is secure data capture and transmission. The financial institutions and processing/acquiring arrangements handle authorization and settlement.</li>
+<li><b>“The processor is the customer's bank.”</b> No. The issuing bank makes the authorization decision for the cardholder's account.</li>
+<li><b>“Every business needs two vendors.”</b> No. A PSP can bundle gateway and processing services.</li>
+<li><b>“The lowest transaction rate is the cheapest option.”</b> Not necessarily. Monthly charges, fixed fees, international payments, disputes, reserves and conversion costs can change the total.</li>
+<li><b>“Approved means settled.”</b> Authorization confirms approval at that stage. Capture, clearing and settlement are separate steps.</li>
+</ul>
+
+<h2>Frequently asked questions</h2>
+<h3>Is a payment gateway the same as a payment processor?</h3>
+<p>No. A gateway securely captures and transmits payment information from checkout. A processor handles transaction processing and communications through the payment ecosystem. Some providers offer both in one platform.</p>
+<h3>Can I use a payment gateway without a processor?</h3>
+<p>A gateway alone does not complete a card payment. The transaction still needs processing through an acquirer, processor or integrated payment provider. A gateway vendor may connect you to those services through partners.</p>
+<h3>Is PayPal a payment gateway or a payment processor?</h3>
+<p>Product descriptions can cover several roles. PayPal offers payment services that can include checkout, processing and other capabilities. Check the specific PayPal product and country you plan to use instead of assuming one label describes every feature.</p>
+<h3>What is the difference between a PSP and a payment gateway?</h3>
+<p>A gateway is one component that securely transmits payment data. A PSP is a broader provider that may combine gateway, processing, acquiring, payment methods, risk tools and other services.</p>
+<h3>Does a payment gateway handle refunds and chargebacks?</h3>
+<p>It depends on the product. A gateway or payment dashboard may provide buttons and APIs for refunds or dispute information, but the actual refund and dispute processes involve the payment provider, acquirer, card network and banks. Confirm who is responsible for each step.</p>
+<h3>Which is better for a small business?</h3>
+<p>Many small businesses prefer an integrated PSP because it can reduce setup and vendor management. The right choice depends on supported countries and payment methods, total fees, payout terms, integration needs and support quality.</p>
+
+<h2>Bottom line</h2>
+<p>A payment gateway connects checkout to the payment system and securely transmits payment information. A payment processor handles transaction processing through the relevant financial institutions and networks. A PSP may combine both, along with other services. For a business, the best choice is the setup that provides the payment methods, security, reliability, support and total cost it needs—not simply the product with the most familiar label.</p>
+
+<h2>Sources and further reading</h2>
+<ul>
+<li><a href="https://www.adyen.com/knowledge-hub/payment-gateway" target="_blank" rel="noopener noreferrer">Adyen: Everything you need to know about payment gateways</a> — gateway and processor roles, merchant accounts and PSPs.</li>
+<li><a href="https://docs.adyen.com/adyen-glossary" target="_blank" rel="noopener noreferrer">Adyen documentation glossary</a> — definitions of payment gateway, processor and PSP.</li>
+<li><a href="https://stripe.com/resources/more/payment-processor-vs-payment-gateway" target="_blank" rel="noopener noreferrer">Stripe: Payment processor vs payment gateway</a> — an overview of how the services work together.</li>
+<li><a href="https://www.paypal.com/us/brc/article/what-is-a-payment-gateway" target="_blank" rel="noopener noreferrer">PayPal: What is a payment gateway?</a> — a provider's explanation of gateway and processing services.</li>
+</ul>
+<p class="note">This article is for general educational purposes. Payment terminology, responsibilities and regulatory requirements vary by provider, payment method and country. Check your provider's current documentation and contract before making a business decision.</p>
+<p class="note">Explore more in <a href="finance.html">Finance and fintech</a>, or read our guide to <a href="choosing-a-payment-processor.html">choosing a payment processor</a>.</p>
+</article>
+</main>
+<footer><div class="wrap"><div><a href="about.html">About</a><a href="contact.html">Contact</a><a href="privacy.html">Privacy</a><a href="write-for-us.html">Write for us</a></div><div>Content on Stackwire is for information only and is not financial, legal or investment advice.</div></div></footer>
+</body>
+</html>
