@@ -154,3 +154,8 @@ footer .wrap{align-items:flex-start}
 .answer{margin:24px 0 32px;padding:20px 22px;background:var(--tint);border-left:4px solid var(--signal);border-radius:4px}
 .answer strong{display:block;margin-bottom:6px;font:700 16px var(--sans);color:var(--ink)}
 .answer p{margin:0;color:var(--ink)}
+
+/* Header search form */
+.search{display:flex;align-items:center;gap:6px;max-width:none}
+.search input[type=search]{width:180px;min-width:0}
+.search .search-submit{padding:8px 12px;font-size:14px;border-radius:999px}
