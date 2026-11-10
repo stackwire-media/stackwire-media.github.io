@@ -159,3 +159,13 @@ footer .wrap{align-items:flex-start}
 .search{display:flex;align-items:center;gap:6px;max-width:none}
 .search input[type=search]{width:180px;min-width:0}
 .search .search-submit{padding:8px 12px;font-size:14px;border-radius:999px}
+
+/* Article tables: keep columns inside the reading width and wrap long text */
+.art table,.page table{width:100%;max-width:100%;table-layout:fixed;border-collapse:collapse;margin:22px 0 28px;font-size:16px;line-height:1.5}
+.art th,.art td,.page th,.page td{padding:11px 10px;text-align:left;vertical-align:top;border-bottom:1px solid var(--rule);overflow-wrap:anywhere;word-break:normal}
+.art th,.page th{font-weight:700;background:var(--tint)}
+.art table th:first-child,.art table td:first-child{width:19%}
+.art table th:nth-child(2),.art table td:nth-child(2){width:28%}
+.art table th:nth-child(3),.art table td:nth-child(3){width:53%}
+@media(max-width:600px){.art table,.page table{font-size:14px}.art th,.art td,.page th,.page td{padding:8px 6px}}
+
