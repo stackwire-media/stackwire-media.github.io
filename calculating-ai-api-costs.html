@@ -22,8 +22,16 @@
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Article","headline":"How to Calculate AI API Costs Before You Ship","description":"A practical method for estimating AI API cost per task and per month, including tokens, retries, caching and model choice.","datePublished":"2026-11-09","dateModified":"2026-11-09","inLanguage":"en","mainEntityOfPage":"https://stackwire-media.github.io/calculating-ai-api-costs.html","url":"https://stackwire-media.github.io/calculating-ai-api-costs.html","articleSection":"SaaS and AI","author":{"@type":"Organization","name":"Stackwire Editorial","url":"https://stackwire-media.github.io/about.html"},"publisher":{"@type":"Organization","name":"Stackwire","url":"https://stackwire-media.github.io/"}}
+{"@context":"https://schema.org","@type":"Article","headline":"How to Calculate AI API Costs Before You Ship","description":"A practical method for estimating AI API cost per task and per month, including tokens, retries, caching and model choice.","datePublished":"2026-11-09","dateModified":"2026-11-10","inLanguage":"en","mainEntityOfPage":"https://stackwire-media.github.io/calculating-ai-api-costs.html","url":"https://stackwire-media.github.io/calculating-ai-api-costs.html","articleSection":"SaaS and AI","author":{"@type":"Organization","name":"Stackwire Editorial","url":"https://stackwire-media.github.io/about.html"},"publisher":{"@type":"Organization","name":"Stackwire","url":"https://stackwire-media.github.io/"}}
 </script>
+<style>
+#api-cost-calculator .calc-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(140px,220px);gap:10px 16px;align-items:center;margin:14px 0}
+#api-cost-calculator label{font-weight:600}
+#api-cost-calculator input{width:100%;box-sizing:border-box;padding:9px;border:1px solid #b8c2d1;border-radius:6px;font:inherit;background:#fff;color:#14213d}
+#api-cost-calculator button{padding:10px 16px;border:0;border-radius:6px;background:#14213d;color:#fff;font:inherit;font-weight:700;cursor:pointer}
+#api-cost-result{margin-top:16px;padding:12px;background:#fff;border-radius:6px}
+@media(max-width:560px){#api-cost-calculator .calc-grid{grid-template-columns:1fr}}
+</style>
 </head>
 <body>
 <a class="skip" href="#top">Skip to content</a>
@@ -35,7 +43,7 @@
 <article class="wrap art">
 <p class="tag">SaaS and AI</p>
 <h1>How to calculate AI API costs before you ship a feature</h1>
-<p class="meta">By Stackwire Editorial. Published 9 November 2026. Updated 9 November 2026.</p>
+<p class="meta">By Stackwire Editorial. Published 9 November 2026. Updated 10 November 2026.</p>
 <p class="lede">An AI feature can look inexpensive in a demo and become a margin problem after customers use it every day. The fix is not guesswork. Estimate the cost of one completed task, multiply it by realistic usage, then test the assumptions against real API logs.</p>
 <figure class="article-figure"><img src="images/ai-api-cost-flow.svg" alt="AI API cost calculation flow from tokens and model calls to per-task and monthly cost" width="1200" height="460" loading="eager" decoding="async" style="display:block;width:100%;height:auto;border-radius:14px"><figcaption>A completed task may involve multiple model calls, retries and tools. Count the full workflow rather than one prompt.</figcaption></figure>
 <div class="answer"><strong>Quick answer</strong><p>To estimate AI API cost, multiply input tokens and output tokens by their respective per-token prices, add any tool, image, audio or other charges, and include retries and failed requests. Calculate the result per successful customer task, then multiply by expected monthly tasks. Always use the provider's current pricing page for the model and features you actually deploy.</p></div>
@@ -60,7 +68,26 @@
 </ul>
 <p>For a workflow with multiple model calls, calculate each call separately and add them together. Do not apply one average token count to every step if the steps behave differently.</p>
 
-<h2>4. A worked example (illustrative, not a provider quote)</h2>
+
+<h2>4. Try the AI API cost calculator</h2>
+<p>Enter your estimated token usage and the prices shown on your provider's current pricing page. The calculator uses prices per one million tokens and estimates text-model charges only. It does not include tools, media, taxes, hosting or retries unless you increase the token totals to account for them.</p>
+<div class="answer" id="api-cost-calculator">
+<strong>Estimate your API spend</strong>
+<form id="api-cost-form">
+<div class="calc-grid">
+<label for="api-input-tokens">Input tokens per request</label><input id="api-input-tokens" type="number" min="0" step="1" value="1500" required>
+<label for="api-output-tokens">Output tokens per request</label><input id="api-output-tokens" type="number" min="0" step="1" value="400" required>
+<label for="api-input-price">Input price per 1M tokens ($)</label><input id="api-input-price" type="number" min="0" step="0.0001" value="1" required>
+<label for="api-output-price">Output price per 1M tokens ($)</label><input id="api-output-price" type="number" min="0" step="0.0001" value="4" required>
+<label for="api-monthly-requests">Requests per month</label><input id="api-monthly-requests" type="number" min="0" step="1" value="10000" required>
+</div>
+<button type="submit">Calculate estimated cost</button>
+</form>
+<p id="api-cost-result" role="status" aria-live="polite"><strong>Estimated monthly text-model cost: $31.00</strong><br>Estimated cost per request: $0.0031</p>
+<p class="note">Illustrative starting values only. Replace them with current provider rates and measured token usage. This estimate assumes one model request per task and excludes all other charges.</p>
+</div>
+
+<h2>5. A worked example (illustrative, not a provider quote)</h2>
 <p>Imagine a SaaS product generates a short customer-support draft. For one model request, assume it uses 1,500 input tokens and 400 output tokens. To make the arithmetic easy, assume a hypothetical model price of $1 per million input tokens and $4 per million output tokens.</p>
 <table>
 <thead><tr><th>Component</th><th>Calculation</th><th>Cost</th></tr></thead>
@@ -74,7 +101,7 @@
 <p>This is only a worked calculation. The assumed rates are not current market prices, and the example excludes retries, tools, taxes and infrastructure. Replace the assumptions with the exact prices and measured usage for your chosen model before making a business decision.</p>
 <p>Now add workflow reality. If some drafts need a second attempt, or the system makes a separate classification call first, the real cost per accepted draft will be higher. Measure the average number of attempts and calls per completed task from production logs.</p>
 
-<h2>5. Five cost drivers teams often miss</h2>
+<h2>6. Five cost drivers teams often miss</h2>
 <h3>Long prompts and conversation history</h3>
 <p>Sending the full conversation, policy instructions or document on every request can make input usage grow quietly. Keep only the context needed for the task, summarize older conversation when appropriate, and avoid repeating static instructions unnecessarily.</p>
 <h3>Output length</h3>
@@ -86,7 +113,7 @@
 <h3>Tools and non-text inputs</h3>
 <p>Search, code execution, image understanding, audio and other tools can have separate charges. Add them to the workflow estimate rather than treating every AI feature as a single text-model call.</p>
 
-<h2>6. Turn the estimate into a monthly budget</h2>
+<h2>7. Turn the estimate into a monthly budget</h2>
 <p>Build three usage scenarios instead of relying on one optimistic forecast:</p>
 <ul>
 <li><strong>Low:</strong> expected adoption with light usage per customer.</li>
@@ -96,7 +123,7 @@
 <p>For each scenario, estimate active customers, completed tasks per customer, average calls per task and cost per call. Add a separate allowance for non-token charges. The high-use scenario is especially important if your plan includes unlimited or generous AI usage.</p>
 <p>After launch, replace assumptions with observed data. Review average and 95th-percentile cost per task, cost per active customer, retry rate, cache-hit rate and the share of tasks that require human correction. An average can hide a small group of very expensive customers.</p>
 
-<h2>7. Choose the right optimization, not just the cheapest model</h2>
+<h2>8. Choose the right optimization, not just the cheapest model</h2>
 <p>Try optimizations in this order:</p>
 <ol>
 <li>Remove unnecessary context and repeated instructions.</li>
@@ -107,7 +134,7 @@
 </ol>
 <p>A cheaper model is not automatically cheaper for the business if it produces more incorrect answers, retries or support tickets. Compare cost per accepted result, not only cost per API call.</p>
 
-<h2>8. Connect cost to your pricing model</h2>
+<h2>9. Connect cost to your pricing model</h2>
 <p>Once you know cost per completed task, you can decide what to include in each subscription tier. A base allowance with metered overages can make costs more predictable for both sides. A credit system can work when tasks have different costs, but explain what a credit represents. Avoid unlimited usage unless you have evidence that heavy users remain profitable.</p>
 <p>For the next step, read our guide to <a href="pricing-ai-features-saas.html">pricing an AI feature without losing your margins</a>. It covers hybrid plans and how to think about allowances and overages.</p>
 
@@ -131,6 +158,32 @@
 </aside>
 <div class="box"><p>Building an AI product? Explore more <a href="saas-ai.html">SaaS and AI guides</a>, or <a href="write-for-us.html">contribute an expert article</a> to Stackwire.</p></div>
 <p class="related">Related SaaS and AI guides: <a href="pricing-ai-features-saas.html">price AI features in a SaaS product</a>, <a href="ai-agent-cost-per-task.html">estimate AI agent costs</a> and <a href="rag-vs-fine-tuning.html">compare RAG and fine-tuning</a>.</p>
+
+<script>
+(function () {
+  var form = document.getElementById('api-cost-form');
+  var result = document.getElementById('api-cost-result');
+  if (!form || !result) return;
+  form.addEventListener('submit', function (event) {
+    event.preventDefault();
+    var ids = ['api-input-tokens','api-output-tokens','api-input-price','api-output-price','api-monthly-requests'];
+    var values = ids.map(function (id) { return Number(document.getElementById(id).value); });
+    if (values.some(function (value) { return !Number.isFinite(value) || value < 0; })) {
+      result.textContent = 'Enter valid non-negative numbers in every field.';
+      return;
+    }
+    var perRequest = (values[0] / 1000000 * values[2]) + (values[1] / 1000000 * values[3]);
+    var monthly = perRequest * values[4];
+    result.innerHTML = '<strong>Estimated monthly text-model cost: 
+<footer><div class="wrap"><div><a href="about.html">About</a><a href="contact.html">Contact</a><a href="privacy.html">Privacy</a><a href="editorial-policy.html">Editorial standards</a><a href="write-for-us.html">Write for us</a></div><div>Content on Stackwire is for information only and is not financial, legal or investment advice.</div></div></footer>
+</body>
+</html> + monthly.toFixed(2) + '</strong><br>Estimated cost per request: 
+<footer><div class="wrap"><div><a href="about.html">About</a><a href="contact.html">Contact</a><a href="privacy.html">Privacy</a><a href="editorial-policy.html">Editorial standards</a><a href="write-for-us.html">Write for us</a></div><div>Content on Stackwire is for information only and is not financial, legal or investment advice.</div></div></footer>
+</body>
+</html> + perRequest.toFixed(6);
+  });
+}());
+</script>
 </article>
 </main>
 <footer><div class="wrap"><div><a href="about.html">About</a><a href="contact.html">Contact</a><a href="privacy.html">Privacy</a><a href="editorial-policy.html">Editorial standards</a><a href="write-for-us.html">Write for us</a></div><div>Content on Stackwire is for information only and is not financial, legal or investment advice.</div></div></footer>
