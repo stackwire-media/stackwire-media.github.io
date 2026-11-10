@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="500" viewBox="0 0 1200 500" role="img" aria-labelledby="title desc">
+<title id="title">How a business USDC payment can become a US dollar bank deposit</title>
+<desc id="desc">A customer sends USDC on Ethereum. Coinbase payment infrastructure handles the incoming payment. In the announced PNC pilot, the USDC is converted one to one into US dollars, then deposited into an eligible business's designated PNC account.</desc>
+<rect width="1200" height="500" rx="28" fill="#f4f7fb"/>
+<text x="60" y="66" font-family="Arial,sans-serif" font-size="30" font-weight="700" fill="#14213d">From USDC payment to a US dollar deposit</text>
+<text x="60" y="105" font-family="Arial,sans-serif" font-size="19" fill="#64748b">Simplified flow described in the PNC and Coinbase pilot announcement</text>
+<g font-family="Arial,sans-serif" text-anchor="middle">
+<rect x="45" y="170" width="245" height="180" rx="18" fill="#fff" stroke="#cbd5e1" stroke-width="3"/>
+<circle cx="80" cy="205" r="20" fill="#e8f1ff"/><text x="80" y="212" font-size="18" font-weight="700" fill="#4f79b8">1</text>
+<text x="167" y="242" font-size="23" font-weight="700" fill="#14213d">Customer</text><text x="167" y="280" font-size="18" fill="#475569">Sends USDC</text><text x="167" y="308" font-size="18" fill="#475569">on Ethereum</text>
+<rect x="345" y="170" width="245" height="180" rx="18" fill="#e8f1ff" stroke="#4f79b8" stroke-width="3"/>
+<circle cx="380" cy="205" r="20" fill="#fff"/><text x="380" y="212" font-size="18" font-weight="700" fill="#4f79b8">2</text>
+<text x="467" y="242" font-size="23" font-weight="700" fill="#14213d">Payment layer</text><text x="467" y="280" font-size="18" fill="#334155">Coinbase Payment</text><text x="467" y="308" font-size="18" fill="#334155">products handle it</text>
+<rect x="645" y="170" width="245" height="180" rx="18" fill="#e9f7f2" stroke="#3b8b73" stroke-width="3"/>
+<circle cx="680" cy="205" r="20" fill="#fff"/><text x="680" y="212" font-size="18" font-weight="700" fill="#3b8b73">3</text>
+<text x="767" y="242" font-size="23" font-weight="700" fill="#14213d">Conversion</text><text x="767" y="280" font-size="18" fill="#334155">USDC converted</text><text x="767" y="308" font-size="18" fill="#334155">1-to-1 into USD</text>
+<rect x="945" y="170" width="210" height="180" rx="18" fill="#fff4e5" stroke="#c28a39" stroke-width="3"/>
+<circle cx="980" cy="205" r="20" fill="#fff"/><text x="980" y="212" font-size="18" font-weight="700" fill="#c28a39">4</text>
+<text x="1050" y="242" font-size="23" font-weight="700" fill="#14213d">Bank account</text><text x="1050" y="280" font-size="18" fill="#334155">USD deposited to</text><text x="1050" y="308" font-size="18" fill="#334155">eligible PNC client</text>
+<g stroke="#64748b" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M295 260h42m-14 -14 14 14 -14 14"/><path d="M595 260h42m-14 -14 14 14 -14 14"/><path d="M895 260h42m-14 -14 14 14 -14 14"/></g>
+</g>
+<rect x="60" y="390" width="1080" height="64" rx="12" fill="#fff" stroke="#d7e0ea"/>
+<text x="600" y="430" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#475569">Limited pilot · Eligible corporate and institutional clients · Not a general small-business service</text>
+</svg>
