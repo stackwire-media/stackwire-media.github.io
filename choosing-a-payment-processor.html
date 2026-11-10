@@ -22,7 +22,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Flat-rate or interchange-plus: how to choose a payment processor", "description": "Compare flat-rate and interchange-plus pricing, see a worked example at $50,000 a month, and use a checklist covering payouts, holds and chargebacks.", "datePublished": "2026-11-06", "dateModified": "2026-11-10", "inLanguage": "en", "mainEntityOfPage": "https://stackwire-media.github.io/choosing-a-payment-processor.html", "url": "https://stackwire-media.github.io/choosing-a-payment-processor.html", "articleSection": "Finance and fintech", "author": {"@type": "Organization", "name": "Stackwire Editorial", "url": "https://stackwire-media.github.io/"}, "publisher": {"@type": "Organization", "name": "Stackwire", "url": "https://stackwire-media.github.io/"}}</script>
-</head>
+<style>#processor-calculator .calc-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(140px,220px);gap:10px 16px;align-items:center;margin:14px 0}#processor-calculator label{font-weight:600}#processor-calculator input{width:100%;box-sizing:border-box;padding:9px;border:1px solid #b8c2d1;border-radius:6px;font:inherit;background:#fff;color:#14213d}#processor-calculator button{padding:10px 16px;border:0;border-radius:6px;background:#14213d;color:#fff;font:inherit;font-weight:700;cursor:pointer}#pc-result{margin-top:16px;padding:12px;background:#fff;border-radius:6px}@media(max-width:560px){#processor-calculator .calc-grid{grid-template-columns:1fr}}</style></head>
 <body>
 <a class="skip" href="#top">Skip to content</a>
 <header><div class="wrap">
@@ -34,7 +34,7 @@
 <article class="wrap art">
 <p class="tag">Finance and fintech</p>
 <h1>Flat-rate or interchange-plus: how to choose a payment processor</h1>
-<p class="meta">By Stackwire Editorial. Published 6 November 2026. Updated 9 November 2026.</p>
+<p class="meta">By Stackwire Editorial. Published 6 November 2026. Updated 10 November 2026.</p>
 <p class="lede">Your processor touches every sale, so a small difference in fees compounds fast. Here is how to compare options on what you will actually pay.</p>
 <figure class="article-figure"><img src="images/payment-pricing-models.svg" alt="Comparison of flat-rate and interchange-plus payment processing pricing models" width="1200" height="460" loading="eager" decoding="async" style="display:block;width:100%;height:auto;border-radius:14px"><figcaption>Two common pricing models: flat-rate bundles costs into a simpler rate, while interchange-plus separates underlying costs from provider markup.</figcaption></figure>
 <div class="answer"><strong>Quick answer</strong><p>For a small or low-volume business, flat-rate pricing is usually simpler. As card volume grows, interchange-plus can cost less because you pay the underlying card fees plus a stated processor markup. Compare your own transaction mix, monthly volume and extra fees before switching.</p></div>
@@ -71,6 +71,21 @@
 <li>Model the total cost at current volume and at a realistic growth scenario.</li>
 <li>Check contract terms, payout timing, reserve policy and support before making the decision.</li>
 </ol>
+<h2>Estimate your monthly processing fees</h2>
+<p>Compare two hypothetical quotes using the same card volume and transaction count. Enter rates from actual provider proposals. This estimate excludes taxes and fees you do not enter; interchange is an assumed average, not a fixed rate.</p>
+<div class="answer" id="processor-calculator"><strong>Flat-rate vs interchange-plus calculator</strong>
+<form id="processor-form"><div class="calc-grid">
+<label for="pc-volume">Monthly card volume ($)</label><input id="pc-volume" type="number" min="0" step="0.01" value="50000">
+<label for="pc-count">Transactions per month</label><input id="pc-count" type="number" min="0" step="1" value="1000">
+<label for="pc-flat-rate">Flat percentage rate (%)</label><input id="pc-flat-rate" type="number" min="0" step="0.001" value="2.9">
+<label for="pc-flat-fixed">Flat fixed fee per transaction ($)</label><input id="pc-flat-fixed" type="number" min="0" step="0.001" value="0.30">
+<label for="pc-interchange">Assumed interchange + network cost (%)</label><input id="pc-interchange" type="number" min="0" step="0.001" value="1.8">
+<label for="pc-markup">Processor markup (%)</label><input id="pc-markup" type="number" min="0" step="0.001" value="0.30">
+<label for="pc-plus-fixed">Processor fee per transaction ($)</label><input id="pc-plus-fixed" type="number" min="0" step="0.001" value="0.10">
+<label for="pc-monthly">Monthly account/platform fees ($)</label><input id="pc-monthly" type="number" min="0" step="0.01" value="0">
+</div><button type="submit">Compare estimated fees</button></form>
+<p id="pc-result" role="status" aria-live="polite"><strong>Illustrative estimate:</strong> flat-rate $1,750.00; interchange-plus $1,250.00 including entered monthly fees.</p>
+<p class="note">Actual statements may include additional items and different card qualification categories. Use the same statement period and include every applicable fee.</p></div>
 <h2>Fees that can change the comparison</h2>
 <ul>
 <li><b>International cards and currency conversion:</b> these may carry additional fees and should be modelled separately.</li>
@@ -95,7 +110,11 @@
 <aside class="srcs"><h2>Sources</h2><ul><li><a href="https://www.visa.com/en-us/support/business/regulation-fees" rel="noopener">Visa: interchange reimbursement fees and merchant discount</a></li><li><a href="https://stripe.com/pricing" rel="noopener">Stripe pricing</a> — an example of published flat-rate pricing and additional fee categories.</li></ul></aside>
 <div class="box"><p>Have expertise to share? <a href="write-for-us.html">Write for Stackwire</a> and publish your own article.</p></div>
 <p class="related">Related guide: <a href="payment-gateway-vs-payment-processor.html">payment gateway vs payment processor</a> explains how the gateway and processor fit into the payment flow.</p>
-</article>
+<script>(function(){var f=document.getElementById('processor-form'),o=document.getElementById('pc-result');if(!f||!o)return;f.addEventListener('submit',function(e){e.preventDefault();var ids=['pc-volume','pc-count','pc-flat-rate','pc-flat-fixed','pc-interchange','pc-markup','pc-plus-fixed','pc-monthly'];var v=ids.map(function(id){return Number(document.getElementById(id).value)});if(v.some(function(n){return !Number.isFinite(n)||n<0})){o.textContent='Enter valid non-negative numbers.';return;}var flat=v[0]*v[2]/100+v[1]*v[3];var plus=v[0]*(v[4]+v[5])/100+v[1]*v[6]+v[7];var fmt=function(n){return '
+</main>
+<footer><div class="wrap"><div><a href="about.html">About</a><a href="contact.html">Contact</a><a href="privacy.html">Privacy</a><a href="editorial-policy.html">Editorial standards</a><a href="write-for-us.html">Write for us</a></div><div>Content on Stackwire is for information only and is not financial, legal or investment advice.</div></div></footer>
+</body>
+</html>+n.toFixed(2)};o.innerHTML='<strong>Estimated monthly fees</strong><br>Flat-rate: '+fmt(flat)+'<br>Interchange-plus: '+fmt(plus)+'<br>'+(flat<plus?'Flat-rate is lower by ':'Interchange-plus is lower by ')+fmt(Math.abs(flat-plus))+' based on these assumptions.';});}());</script></article>
 </main>
 <footer><div class="wrap"><div><a href="about.html">About</a><a href="contact.html">Contact</a><a href="privacy.html">Privacy</a><a href="editorial-policy.html">Editorial standards</a><a href="write-for-us.html">Write for us</a></div><div>Content on Stackwire is for information only and is not financial, legal or investment advice.</div></div></footer>
 </body>
