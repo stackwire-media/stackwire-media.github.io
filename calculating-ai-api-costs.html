@@ -159,31 +159,7 @@
 <div class="box"><p>Building an AI product? Explore more <a href="saas-ai.html">SaaS and AI guides</a>, or <a href="write-for-us.html">contribute an expert article</a> to Stackwire.</p></div>
 <p class="related">Related SaaS and AI guides: <a href="pricing-ai-features-saas.html">price AI features in a SaaS product</a>, <a href="ai-agent-cost-per-task.html">estimate AI agent costs</a> and <a href="rag-vs-fine-tuning.html">compare RAG and fine-tuning</a>.</p>
 
-<script>
-(function () {
-  var form = document.getElementById('api-cost-form');
-  var result = document.getElementById('api-cost-result');
-  if (!form || !result) return;
-  form.addEventListener('submit', function (event) {
-    event.preventDefault();
-    var ids = ['api-input-tokens','api-output-tokens','api-input-price','api-output-price','api-monthly-requests'];
-    var values = ids.map(function (id) { return Number(document.getElementById(id).value); });
-    if (values.some(function (value) { return !Number.isFinite(value) || value < 0; })) {
-      result.textContent = 'Enter valid non-negative numbers in every field.';
-      return;
-    }
-    var perRequest = (values[0] / 1000000 * values[2]) + (values[1] / 1000000 * values[3]);
-    var monthly = perRequest * values[4];
-    result.innerHTML = '<strong>Estimated monthly text-model cost: 
-<footer><div class="wrap"><div><a href="about.html">About</a><a href="contact.html">Contact</a><a href="privacy.html">Privacy</a><a href="editorial-policy.html">Editorial standards</a><a href="write-for-us.html">Write for us</a></div><div>Content on Stackwire is for information only and is not financial, legal or investment advice.</div></div></footer>
-</body>
-</html> + monthly.toFixed(2) + '</strong><br>Estimated cost per request: 
-<footer><div class="wrap"><div><a href="about.html">About</a><a href="contact.html">Contact</a><a href="privacy.html">Privacy</a><a href="editorial-policy.html">Editorial standards</a><a href="write-for-us.html">Write for us</a></div><div>Content on Stackwire is for information only and is not financial, legal or investment advice.</div></div></footer>
-</body>
-</html> + perRequest.toFixed(6);
-  });
-}());
-</script>
+<script>(function(){var f=document.getElementById('api-cost-form'),o=document.getElementById('api-cost-result');if(!f||!o)return;f.addEventListener('submit',function(e){e.preventDefault();var ids=['api-input-tokens','api-output-tokens','api-input-price','api-output-price','api-monthly-requests'];var v=ids.map(function(id){return Number(document.getElementById(id).value)});if(v.some(function(n){return !Number.isFinite(n)||n<0})){o.textContent='Enter valid non-negative numbers.';return;}var per=(v[0]/1000000*v[2])+(v[1]/1000000*v[3]);var monthly=per*v[4];var fmt=function(n){return String.fromCharCode(36)+n.toFixed(2)};o.innerHTML='<strong>Estimated monthly text-model cost: '+fmt(monthly)+'</strong><br>Estimated cost per request: '+fmt(per);});}());</script>
 </article>
 </main>
 <footer><div class="wrap"><div><a href="about.html">About</a><a href="contact.html">Contact</a><a href="privacy.html">Privacy</a><a href="editorial-policy.html">Editorial standards</a><a href="write-for-us.html">Write for us</a></div><div>Content on Stackwire is for information only and is not financial, legal or investment advice.</div></div></footer>
