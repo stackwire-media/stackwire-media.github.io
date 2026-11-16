@@ -5,4 +5,4 @@ Allow: /
 User-agent: OAI-SearchBot
 Allow: /
 
-Sitemap: https://stackwire-media.github.io/sitemap.xml
+Sitemap: https://stackwiremedia.com/sitemap.xml
