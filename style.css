@@ -218,3 +218,10 @@ footer .wrap{align-items:flex-start}
  .art-redesign h2{margin-top:38px}
  .art-redesign .answer{padding:18px}
 }
+
+
+/* Free editorial stock photos in article introductions */
+.stock-photo{margin:28px 0 34px;}
+.stock-photo img{display:block;width:100%;height:auto;max-height:440px;object-fit:cover;border-radius:12px;}
+.stock-photo figcaption{margin-top:9px;color:var(--muted);font-size:13px;line-height:1.5;}
+.stock-photo figcaption a{color:var(--signal);text-underline-offset:2px;}
