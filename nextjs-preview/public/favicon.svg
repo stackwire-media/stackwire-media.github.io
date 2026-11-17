@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Stackwire">
+  <defs>
+    <linearGradient id="sw" x1="10" y1="8" x2="55" y2="58" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#243b63"/>
+      <stop offset="1" stop-color="#101b2d"/>
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="15" fill="url(#sw)"/>
+  <path d="M43.5 17.5H27.2c-6.1 0-9.7 3.2-9.7 8.1 0 4.5 3 6.7 8.7 8.2l11.1 2.9c5.4 1.4 7.7 3.6 7.7 7.2 0 5.2-4.2 8.4-10.5 8.4H18" fill="none" stroke="#fff" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M39 17.5h6.5M18 52.3h7" fill="none" stroke="#8ee4d2" stroke-width="5" stroke-linecap="round"/>
+  <path d="M31.5 26.5h10.2" fill="none" stroke="#8ee4d2" stroke-width="2.5" stroke-linecap="round" opacity=".9"/>
+</svg>
