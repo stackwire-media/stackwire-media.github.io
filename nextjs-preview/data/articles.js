@@ -1,15 +1,25 @@
-export const articles = [
-  { slug: "merchant-account", category: "Finance & Fintech", title: "What is a merchant account? Where does your customer's money actually go?", description: "Follow a card payment from authorization to settlement and payout, compare account models, and understand fees and holds.", date: "13 Nov 2026", read: "8 min read" },
-  { slug: "usdc-payments-for-businesses", category: "Finance & Fintech", title: "How businesses can receive USDC payments and convert them to dollars", description: "Understand how eligible businesses can receive USDC, convert it into dollars and assess the risks and banking requirements.", date: "10 Nov 2026", read: "9 min read" },
-  { slug: "choosing-a-payment-processor", category: "Finance & Fintech", title: "Flat-rate or interchange-plus: how to choose a payment processor", description: "Compare pricing models, see a worked example and use a checklist covering payouts, holds and chargebacks.", date: "9 Nov 2026", read: "9 min read" },
-  { slug: "payment-gateway-vs-payment-processor", category: "Finance & Fintech", title: "Payment gateway vs payment processor: what’s the difference?", description: "Understand the roles of gateways, processors and PSPs, follow a typical card payment, and compare providers.", date: "9 Nov 2026", read: "7 min read" },
-  { slug: "stablecoin-rules-us-founders", category: "Crypto & Web3", title: "US stablecoin rules: what founders need to know in 2026", description: "A practical guide to the GENIUS Act, issuer requirements and the latest US stablecoin rules.", date: "10 Nov 2026", read: "10 min read" },
-  { slug: "ai-agent-payments-safely", category: "SaaS & AI", title: "How can businesses let AI agents make payments safely?", description: "Understand payment authorization, supplier verification, spending limits and trusted agent protocols.", date: "10 Nov 2026", read: "8 min read" },
-  { slug: "calculating-ai-api-costs", category: "SaaS & AI", title: "How to calculate AI API costs before you ship a feature", description: "Estimate cost per task and per month, including tokens, retries, prompt caching and tools.", date: "9 Nov 2026", read: "8 min read" },
-  { slug: "ai-agent-cost-per-task", category: "SaaS & AI", title: "How much does an AI agent cost? A practical cost breakdown", description: "Estimate agent costs per task and per month, including model calls, tools, retries and human review.", date: "9 Nov 2026", read: "8 min read" },
-  { slug: "rag-vs-fine-tuning", category: "SaaS & AI", title: "RAG vs fine-tuning: which should you use for an AI application?", description: "Compare retrieval and training for changing knowledge, citations, task behavior, cost and maintenance.", date: "9 Nov 2026", read: "9 min read" },
-  { slug: "pricing-ai-features-saas", category: "SaaS & AI", title: "How to price an AI feature without losing your margins", description: "Learn how to price AI features when usage costs scale, with a worked example and a practical checklist.", date: "6 Nov 2026", read: "9 min read" }
-];
+import articleContent from "./articles-content.json";
+
+const categoryBySlug = {
+  "merchant-account": "Finance & Fintech",
+  "usdc-payments-for-businesses": "Finance & Fintech",
+  "choosing-a-payment-processor": "Finance & Fintech",
+  "payment-gateway-vs-payment-processor": "Finance & Fintech",
+  "stablecoin-rules-us-founders": "Crypto & Web3",
+  "ai-agent-payments-safely": "SaaS & AI",
+  "calculating-ai-api-costs": "SaaS & AI",
+  "ai-agent-cost-per-task": "SaaS & AI",
+  "rag-vs-fine-tuning": "SaaS & AI",
+  "pricing-ai-features-saas": "SaaS & AI"
+};
+
+export const articles = articleContent.map(item => ({
+  slug: item.slug,
+  category: categoryBySlug[item.slug],
+  title: item.title.replace(/\\s*\\|\\s*Stackwire$/, ""),
+  description: item.description,
+  date: new Date(item.date + "T00:00:00Z").toLocaleDateString("en-GB", { day: "numeric", month: "short", year: "numeric" })
+}));
 
 export const categories = [
   { name: "Finance & Fintech", slug: "finance", description: "Payments, lending and financial infrastructure. Clear explanations for people building and running businesses.", count: 4, tone: "finance" },
