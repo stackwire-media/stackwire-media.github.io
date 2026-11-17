@@ -41,3 +41,65 @@
 .legacy-content .page h1{font:800 clamp(36px,5vw,52px)/1.1 var(--serif);letter-spacing:-.05em}
 .legacy-content .page h2{font:750 25px/1.25 var(--serif);letter-spacing:-.03em;margin-top:34px}
 @media(max-width:700px){.legacy-content .cat-head,.legacy-content .listwrap{width:calc(100% - 36px)}.legacy-content .cat-head{padding-top:48px;padding-bottom:30px}.legacy-content .posts{grid-template-columns:1fr}.legacy-content .posts li{padding:19px}.legacy-content .page{padding-top:38px;padding-bottom:52px}}
+
+
+/* Refined Stackwire identity and navigation */
+.brand{gap:12px;letter-spacing:.115em;font-size:18px;color:#101b2d}
+.brand img{width:40px;height:40px;flex:0 0 40px;border-radius:12px;box-shadow:0 5px 15px #101b2d20}
+.brand-word{display:inline-block;line-height:1;letter-spacing:.105em}
+.brand-light{color:#718099;font-weight:600}
+.header-inner{height:86px;gap:24px}
+.header-inner nav{gap:clamp(15px,2.1vw,30px)}
+.header-inner nav a{font-size:13px;letter-spacing:.005em}
+.header-inner nav a:hover{color:var(--blue)}
+.header-actions{gap:14px;white-space:nowrap}
+.search-link{font-size:13px;font-weight:650;color:#58657a;padding:9px 5px}
+.search-link span{font-size:19px;vertical-align:-2px;margin-right:4px}
+.header-cta{background:#101b2d;color:#fff;border-color:#101b2d;padding:11px 17px;transition:background .2s,transform .2s}
+.header-cta:hover{background:#315efb;border-color:#315efb;transform:translateY(-1px)}
+.header-cta span{color:#8ee4d2}
+.site-header{box-shadow:0 4px 18px #101b2d08}
+.site-footer .brand img{box-shadow:0 4px 14px #0003}
+.site-footer .brand-word{color:#fff}
+.site-footer .brand-light{color:#91a1ba}
+.site-footer .footer-brand p{max-width:280px}
+.footer-links a:hover{color:#8ee4d2}
+.feature-card,.category-card{border-radius:9px}
+.feature-content{padding:26px}
+.feature-content h3{line-height:1.3}
+.latest-item{border-bottom-color:#dfe4eb}
+.latest-item:hover .latest-title{color:var(--blue)}
+.latest-thumb{border-radius:8px}
+.button-primary,.button-light{border-radius:6px;transition:transform .2s,box-shadow .2s}
+.button-primary:hover{transform:translateY(-2px);box-shadow:0 12px 25px #315efb38}
+.button-light:hover{transform:translateY(-2px)}
+.hero-art{border-radius:12px}
+.category-card{border-radius:9px}
+.search-input{border-radius:9px}
+@media(max-width:980px){
+ .header-inner{gap:16px}
+ .brand{font-size:16px;gap:9px}
+ .brand img{width:36px;height:36px;flex-basis:36px}
+ .header-inner nav{gap:14px}
+ .header-inner nav a{font-size:12px}
+ .header-actions{gap:8px}
+ .header-cta{padding:9px 12px}
+}
+@media(max-width:720px){
+ .header-inner{height:auto;min-height:70px;padding:12px 0;row-gap:10px}
+ .brand{font-size:16px}
+ .brand img{width:36px;height:36px;flex-basis:36px}
+ .header-actions{margin-left:auto}
+ .search-link{font-size:0;padding:7px}
+ .search-link span{font-size:22px;margin:0}
+ .header-cta{font-size:11px;padding:8px 11px}
+ .header-inner nav{justify-content:flex-start;gap:23px;padding:8px 0 3px;border-top:1px solid #e2e6ec}
+ .header-inner nav a{font-size:12px}
+ .footer-inner{gap:20px}
+}
+@media(max-width:380px){
+ .brand{font-size:14px;gap:7px}
+ .brand img{width:32px;height:32px;flex-basis:32px}
+ .header-cta{padding:7px 9px}
+ .header-inner nav{gap:18px}
+}
