@@ -11,7 +11,16 @@ export const metadata = {
   icons: { icon: [{ url: "/favicon.svg", type: "image/svg+xml" }] }
 };
 
-function SiteStructuredData() {\n  const value = {\n    "@context": "https://schema.org",\n    "@graph": [\n      { "@type": "Organization", "name": "Stackwire Media", "url": "https://stackwiremedia.com/" },\n      { "@type": "WebSite", "name": "Stackwire Media", "url": "https://stackwiremedia.com/", "inLanguage": "en" }\n    ]\n  };\n  return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(value) }} />;\n}\nfunction Brand() {
+function SiteStructuredData() {
+  const value = {
+    "@context": "https://schema.org",
+    "@graph": [
+      { "@type": "Organization", "name": "Stackwire Media", "url": "https://stackwiremedia.com/" },
+      { "@type": "WebSite", "name": "Stackwire Media", "url": "https://stackwiremedia.com/", "inLanguage": "en" }
+    ]
+  };
+  return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(value) }} />;
+}\nfunction Brand() {
   return <a className="brand" href="/" aria-label="Stackwire Media home">
     <img src="/favicon.svg" width="38" height="38" alt="" />
     <span className="brand-word">STACK<span>WIRE</span></span>
