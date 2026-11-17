@@ -1,23 +1,70 @@
 import { articles, categories } from "../data/articles";
 
-const featured = [
-  { ...articles.find(a => a.slug === "pricing-ai-features-saas"), label: "Editor's pick", visual: "visual-ai" },
-  { ...articles.find(a => a.slug === "stablecoin-rules-us-founders"), label: "Crypto & Web3", visual: "visual-crypto" },
-  { ...articles.find(a => a.slug === "usdc-payments-for-businesses"), label: "Finance & Fintech", visual: "visual-finance" }
-];
+const imageBySlug = {
+  "merchant-account": "https://images.pexels.com/photos/3570237/pexels-photo-3570237.jpeg?auto=compress&cs=tinysrgb&w=1200",
+  "usdc-payments-for-businesses": "https://images.pexels.com/photos/3570242/pexels-photo-3570242.jpeg?auto=compress&cs=tinysrgb&w=1200",
+  "choosing-a-payment-processor": "https://images.pexels.com/photos/8296991/pexels-photo-8296991.jpeg?auto=compress&cs=tinysrgb&w=1200",
+  "payment-gateway-vs-payment-processor": "https://images.pexels.com/photos/10330109/pexels-photo-10330109.jpeg?auto=compress&cs=tinysrgb&w=1200",
+  "stablecoin-rules-us-founders": "https://images.pexels.com/photos/14911431/pexels-photo-14911431.jpeg?auto=compress&cs=tinysrgb&w=1200",
+  "ai-agent-payments-safely": "https://images.pexels.com/photos/6694475/pexels-photo-6694475.jpeg?auto=compress&cs=tinysrgb&w=1200",
+  "calculating-ai-api-costs": "https://images.pexels.com/photos/36496927/pexels-photo-36496927.jpeg?auto=compress&cs=tinysrgb&w=1200",
+  "ai-agent-cost-per-task": "https://images.pexels.com/photos/37085304/pexels-photo-37085304.jpeg?auto=compress&cs=tinysrgb&w=1200",
+  "rag-vs-fine-tuning": "https://images.pexels.com/photos/34804016/pexels-photo-34804016.jpeg?auto=compress&cs=tinysrgb&w=1200",
+  "pricing-ai-features-saas": "https://images.pexels.com/photos/34804005/pexels-photo-34804005.jpeg?auto=compress&cs=tinysrgb&w=1200"
+};
+const featuredSlugs = ["merchant-account", "stablecoin-rules-us-founders", "pricing-ai-features-saas"];
+const featured = featuredSlugs.map(slug => articles.find(article => article.slug === slug)).filter(Boolean);
+const latest = articles.slice().sort((a,b) => new Date(b.date) - new Date(a.date));
+
+function ArticleCard({ article, featured = false }) {
+  return <a className={featured ? "story-card story-card-featured" : "story-card"} href={`/${article.slug}/`}>
+    <div className="story-image"><img src={imageBySlug[article.slug]} alt="" loading="lazy" /><span className="image-tag">{article.category}</span></div>
+    <div className="story-copy"><p className="story-meta">{article.category} <span>·</span> {article.date}</p><h3>{article.title}</h3><p className="story-description">{article.description}</p><span className="story-read">Read article <b>↗</b></span></div>
+  </a>;
+}
 
 export default function Home() {
+  const lead = featured[0];
   return <main id="main">
-    <section className="hero wrap">
-      <div className="hero-copy"><p className="eyebrow"><span className="eyebrow-line" /> INDEPENDENT IDEAS. PRACTICAL INSIGHT.</p><h1>Understand the systems <em>shaping business.</em></h1><p className="hero-lede">Clear, useful guides on finance, crypto, SaaS and AI. Less noise. Better decisions.</p><div className="hero-actions"><a className="button-primary" href="#latest">Explore the latest <span>↓</span></a><a className="text-link" href="/write-for-us/">Contribute an article ↗</a></div><div className="hero-note"><span className="pulse" /> Practical analysis for founders, operators and curious minds.</div></div>
-      <div className="hero-art" aria-label="Abstract Stackwire editorial graphic"><div className="art-orbit orbit-one" /><div className="art-orbit orbit-two" /><div className="art-core">S<span>W</span></div><div className="art-caption caption-top">SIGNAL OVER NOISE</div><div className="art-caption caption-bottom">IDEAS THAT MOVE WORK FORWARD</div><div className="art-index">01 / 03</div></div>
+    <section className="home-intro wrap">
+      <div className="intro-copy">
+        <p className="eyebrow"><span className="eyebrow-mark" /> INDEPENDENT IDEAS. PRACTICAL INSIGHT.</p>
+        <h1>Clear thinking for a <em>changing world.</em></h1>
+        <p className="intro-lede">Useful perspectives on finance, crypto, SaaS and AI. Understand the systems behind the headlines and make better-informed decisions.</p>
+        <div className="intro-actions"><a className="button-primary" href="#latest">Explore the latest <span>↓</span></a><a className="quiet-link" href="/about/">About Stackwire ↗</a></div>
+        <div className="intro-proof"><span className="proof-dot" /> Practical guides for founders, operators and curious readers.</div>
+      </div>
+      {lead && <a className="lead-story" href={`/${lead.slug}/`}>
+        <img src={imageBySlug[lead.slug]} alt="" fetchPriority="high" />
+        <span className="lead-overlay"></span>
+        <span className="lead-label">EDITOR'S PICK</span>
+        <span className="lead-caption"><span>{lead.category}</span><strong>{lead.title}</strong><small>Explore the guide ↗</small></span>
+      </a>}
     </section>
-    <section className="ticker"><div className="ticker-inner"><span>THE STACKWIRE BRIEFING</span><i /> FINANCE & FINTECH <i /> CRYPTO & WEB3 <i /> SAAS & AI <i /> PRACTICAL KNOWLEDGE <i /> FINANCE & FINTECH</div></section>
-    <section className="section wrap" id="featured"><div className="section-heading"><div><p className="eyebrow">START WITH THE IMPORTANT</p><h2>Featured reads</h2></div><p>Useful context for the decisions on your desk.</p></div>
-      <div className="feature-grid">{featured.map((item, i) => <a className={`feature-card ${item.visual} ${i === 0 ? "feature-main" : ""}`} href={`/${item.slug}/`} key={item.slug}><div className="feature-visual"><span className="visual-number">0{i + 1}</span><span className="visual-symbol">{i === 0 ? "↗" : i === 1 ? "◈" : "◎"}</span><span className="visual-lines" /></div><div className="feature-content"><span className="category-label">{item.category}</span><h3>{item.title}</h3><p>{item.description}</p><span className="read-link">Read the guide <b>↗</b></span></div></a>)}</div>
+
+    <section className="topic-strip"><div className="wrap topic-strip-inner"><span>EXPLORE THE BIG PICTURE</span><a href="/finance/">Finance & Fintech <b>↗</b></a><a href="/crypto/">Crypto & Web3 <b>↗</b></a><a href="/saas-ai/">SaaS & AI <b>↗</b></a></div></section>
+
+    <section className="section wrap" id="featured">
+      <div className="section-heading"><div><p className="eyebrow">SELECTED FOR YOU</p><h2>Featured stories</h2></div><p>Start with the ideas worth understanding.</p></div>
+      <div className="featured-grid">{featured.map((article,i) => <ArticleCard key={article.slug} article={article} featured={i===0} />)}</div>
     </section>
-    <section className="section categories-section"><div className="wrap"><div className="section-heading"><div><p className="eyebrow">THREE FOCUSED DESKS</p><h2>Explore by topic</h2></div><p>Deep enough to be useful. Clear enough to act on.</p></div><div className="category-grid">{categories.map((cat, i) => <a href={`/${cat.slug}/`} className={`category-card ${cat.tone}`} key={cat.slug}><span className="category-count">0{i + 1} / {cat.count} {cat.count === 1 ? "GUIDE" : "GUIDES"}</span><span className="category-icon">{["↗", "◈", "⌘"][i]}</span><h3>{cat.name}</h3><p>{cat.description}</p><span className="category-arrow">Explore topic <b>↗</b></span></a>)}</div></div></section>
-    <section className="section wrap" id="latest"><div className="section-heading"><div><p className="eyebrow">FRESH PERSPECTIVES</p><h2>Latest articles</h2></div><p>Ideas and explainers, built to be useful.</p></div><div className="latest-list">{articles.slice().reverse().map((article, i) => <a href={`/${article.slug}/`} className="latest-item" key={article.slug}><span className={`latest-thumb latest-${article.category.includes("Finance") ? "finance" : article.category.includes("Crypto") ? "crypto" : "saas"}`} aria-hidden="true"><b>{article.category.includes("Finance") ? "◎" : article.category.includes("Crypto") ? "◈" : "⌘"}</b></span><span className="latest-copy"><span className="latest-category">{article.category}</span><span className="latest-title">{article.title}</span></span><span className="latest-date">{article.date}</span><span className="latest-arrow">↗</span></a>)}</div></section>
-    <section className="contribute"><div className="wrap contribute-inner"><div><p className="eyebrow">HAVE SOMETHING WORTH SHARING?</p><h2>Bring your expertise<br/>to the conversation.</h2></div><a className="button-light" href="/write-for-us/">Write for Stackwire <span>↗</span></a></div></section>
+
+    <section className="topic-section">
+      <div className="wrap">
+        <div className="section-heading"><div><p className="eyebrow">THREE FOCUSED DESKS</p><h2>Explore by topic</h2></div><p>Clear explanations. Useful context. No unnecessary noise.</p></div>
+        <div className="topic-grid">{categories.map((category,i) => <a className={`topic-card topic-${i}`} href={`/${category.slug}/`} key={category.slug}>
+          <span className="topic-number">0{i+1} / {category.count} {category.count===1?"GUIDE":"GUIDES"}</span>
+          <span className="topic-icon" aria-hidden="true">{["↗","◈","⌘"][i]}</span>
+          <h3>{category.name}</h3><p>{category.description}</p><span className="topic-link">Explore topic <b>↗</b></span>
+        </a>)}</div>
+      </div>
+    </section>
+
+    <section className="section wrap" id="latest">
+      <div className="section-heading"><div><p className="eyebrow">FRESH PERSPECTIVES</p><h2>Latest articles</h2></div><p>Practical reads to help you get up to speed.</p></div>
+      <div className="latest-grid">{latest.map(article => <ArticleCard key={article.slug} article={article} />)}</div>
+    </section>
+
+    <section className="contribute-light"><div className="wrap contribute-inner"><div><p className="eyebrow">HAVE SOMETHING WORTH SHARING?</p><h2>Bring your expertise<br/>to the conversation.</h2><p>We welcome original, well-researched contributions across our three editorial topics.</p></div><a className="button-primary" href="/write-for-us/">Write for Stackwire <span>↗</span></a></div></section>
   </main>;
 }
