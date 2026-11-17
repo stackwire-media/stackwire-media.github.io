@@ -24,8 +24,7 @@ export async function generateMetadata({ params }) {
     title: item.title,
     description: item.description,
     alternates: { canonical: item.canonical },
-    openGraph: { title: item.ogTitle || item.title, description: item.ogDesc || item.description, url: item.canonical, type: articleMap[key] ? "article" : "website", images: ["/images/stackwire-social-card.png"] },
-    robots: key === "privacy" ? { index: true, follow: true } : undefined
+    openGraph: { title: item.ogTitle || item.title, description: item.ogDesc || item.description, url: item.canonical, type: articleMap[key] ? "article" : "website", images: ["/images/stackwire-social-card.png"] }
   };
   const category = categoryMap[key];
   if (category) {
@@ -50,8 +49,9 @@ export default async function ContentPage({ params }) {
   const category = categoryMap[key];
   if (!article && !page && !category) notFound();
   const item = article || page;
-  const body = article ? article.body : page ? page.body : category.main;
-  return <main id="main" className="legacy-content">
+  const rawBody = article ? article.body : page ? page.body : category.main;
+  const body = article ? rawBody : rawBody.replace(/^<main\b[^>]*>/i, "").replace(/<\/main>\s*$/i, "");
+  return <main id="main" className={article ? "legacy-content article-page" : "legacy-content"}>
     {item ? <StructuredData value={item.schema} /> : null}
     <div dangerouslySetInnerHTML={{ __html: body }} />
   </main>;
