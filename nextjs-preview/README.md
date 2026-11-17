@@ -1,8 +1,8 @@
-# Stackwire Next.js design preview
+# Stackwire Next.js site
 
-This folder is an isolated Next.js prototype. It does **not** replace the current live HTML site and is not connected to the production Cloudflare Pages build.
+This is the Next.js version of Stackwire Media. It uses the App Router and static export, so Cloudflare Pages serves prebuilt static files.
 
-## Run locally
+## Local development
 
 ```bash
 cd nextjs-preview
@@ -10,24 +10,27 @@ npm install
 npm run dev
 ```
 
-Open http://localhost:3000.
-
-## Build
+## Production build
 
 ```bash
 npm run build
 ```
 
-The project uses Next.js App Router and static export (`output: "export"`) so it can be hosted as static files on Cloudflare Pages.
+The exported website is written to `out/`. For Cloudflare Pages, configure the project root as `nextjs-preview`, the build command as `npm run build`, and the build output directory as `out`.
 
-## Before production migration
+## Content and routes
 
-- Move the project to the repository root or configure Cloudflare Pages with `nextjs-preview` as its root directory and `out` as the build output.
-- Migrate the complete body of all existing articles into content files and render the existing clean URLs. The current prototype links article cards to the live site's existing URLs.
-- Preserve the current canonical domain, sitemap, robots rules, schema, metadata, image paths, redirects, and every indexed URL.
-- Copy the existing public image library and favicon assets into `public/`.
-- Run a URL-by-URL comparison and mobile/accessibility/performance checks before switching production.
+- All 10 existing articles are stored with their original article HTML, metadata and Article structured data in `data/articles-content.json`.
+- `data/articles.js` supplies the listing data used by the homepage and search.
+- `data/pages-content.json` contains the About, Contact, Privacy, Editorial Policy, Write for Us and category page content.
+- The existing clean article URLs and category/information URLs are generated as static pages.
+- Original article diagrams and image assets are in `public/images/`.
+- Existing `.html` redirects, sitemap and robots rules are copied into `public/`.
+- The search page is available at `/search/`; the old `/search.html` address redirects there.
 
-## Design direction
+## Before production launch
 
-A more confident editorial identity: clearer STACKWIRE wordmark, stronger heading hierarchy, calmer spacing, consistent category colors, restrained graphic treatments, and responsive article discovery. This is a design foundation, not a completed content migration.
+1. Review the Cloudflare Pages preview on desktop and mobile.
+2. Check all 19 existing sitemap URLs, images, navigation, metadata, canonical tags, structured data and redirects.
+3. Confirm Cloudflare Pages production settings use this folder as the project root and `out` as the output directory.
+4. Switch the production deployment only after review and approval.

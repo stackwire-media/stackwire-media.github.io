@@ -16,7 +16,7 @@ const categoryBySlug = {
 export const articles = articleContent.map(item => ({
   slug: item.slug,
   category: categoryBySlug[item.slug],
-  title: item.title.replace(/\\s*\\|\\s*Stackwire$/, ""),
+  title: item.title.replace(/\s*\|\s*Stackwire$/, ""),
   description: item.description,
   date: new Date(item.date + "T00:00:00Z").toLocaleDateString("en-GB", { day: "numeric", month: "short", year: "numeric" })
 }));

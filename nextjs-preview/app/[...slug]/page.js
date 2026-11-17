@@ -28,8 +28,13 @@ export async function generateMetadata({ params }) {
   };
   const category = categoryMap[key];
   if (category) {
-    const label = key === "finance" ? "Finance and fintech" : key === "crypto" ? "Crypto and web3" : "SaaS and AI";
-    return { title: label, alternates: { canonical: `/${key}/` } };
+    const labels = { finance: "Finance and fintech", crypto: "Crypto and Web3", "saas-ai": "SaaS and AI" };
+    const descriptions = {
+      finance: "Practical explainers on payment processing, financial infrastructure and fintech for businesses.",
+      crypto: "Clear, practical coverage of stablecoins, digital assets, regulation and Web3 business use cases.",
+      "saas-ai": "Useful guides to SaaS, AI products, model costs, pricing and software decisions."
+    };
+    return { title: labels[key], description: descriptions[key], alternates: { canonical: `/${key}/` }, openGraph: { title: labels[key] + " | Stackwire", description: descriptions[key], url: `https://stackwiremedia.com/${key}/` } };
   }
   notFound();
 }
