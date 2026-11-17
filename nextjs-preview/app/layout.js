@@ -20,7 +20,8 @@ function SiteStructuredData() {
     ]
   };
   return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(value) }} />;
-}\nfunction Brand() {
+}
+function Brand() {
   return <a className="brand" href="/" aria-label="Stackwire Media home">
     <img src="/favicon.svg" width="38" height="38" alt="" />
     <span className="brand-word">STACK<span>WIRE</span></span>
