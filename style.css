@@ -262,3 +262,39 @@ footer .wrap{align-items:flex-start}
   .stock-photo img{height:230px;border-radius:10px}
   .stock-photo figcaption{padding:9px 11px 11px;font-size:12px}
 }
+
+/* Keep article photos centered and comfortably inside the reading column */
+.art .stock-photo,
+.art-redesign .stock-photo{
+  display:block;
+  box-sizing:border-box;
+  width:min(100%, 680px);
+  max-width:100%;
+  margin:26px auto 32px;
+  padding:0;
+  float:none;
+  clear:both;
+}
+.art .stock-photo img,
+.art-redesign .stock-photo img{
+  display:block;
+  box-sizing:border-box;
+  width:100%;
+  max-width:100%;
+  height:auto;
+  aspect-ratio:16 / 9;
+  max-height:360px;
+  object-fit:cover;
+  margin:0;
+}
+@media(max-width:760px){
+  .art .stock-photo,
+  .art-redesign .stock-photo{
+    width:100%;
+    margin:22px auto 28px;
+  }
+  .art .stock-photo img,
+  .art-redesign .stock-photo img{
+    max-height:260px;
+  }
+}
