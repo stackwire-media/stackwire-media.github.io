@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Stackwire mark">
+<rect x="2" y="2" width="60" height="60" rx="12" fill="#17283d"/>
+<path d="M43 17H28c-7 0-11 4-11 9s4 8 10 10l10 3c6 2 9 4 9 9 0 6-5 10-12 10H18" transform="translate(0 -5)" fill="none" stroke="#f4f0e8" stroke-width="5.2" stroke-linecap="square" stroke-linejoin="miter"/>
+<path d="M42 14v8M17 50v-7" stroke="#c46d4e" stroke-width="5" stroke-linecap="square"/>
+</svg>
