@@ -3,17 +3,18 @@ import "./legacy.css";
 
 export const metadata = {
   metadataBase: new URL("https://stackwiremedia.com"),
-  title: { default: "Stackwire | Practical insight on finance, crypto and AI", template: "%s | Stackwire" },
-  description: "Practical guides on finance and fintech, crypto and Web3, SaaS and AI for founders, operators and curious readers.",
+  title: { default: "Stackwire Media | Finance, Crypto, SaaS & AI", template: "%s | Stackwire Media" },
+  description: "Independent, practical insights on finance and fintech, crypto and Web3, SaaS and AI. Clear guides for founders, operators and curious readers.",
   alternates: { canonical: "/" },
-  openGraph: { type: "website", siteName: "Stackwire", title: "Stackwire | Practical insight on finance, crypto and AI", description: "Practical guides for founders, operators and curious readers.", url: "https://stackwiremedia.com/", images: ["/images/stackwire-social-card.png"] },
-  icons: { icon: [{ url: "/favicon.svg", type: "image/svg+xml" }] }
+  openGraph: { type: "website", siteName: "Stackwire Media", title: "Stackwire Media | Finance, Crypto, SaaS & AI", description: "Independent, practical insights on finance and fintech, crypto and Web3, SaaS and AI.", url: "https://stackwiremedia.com/", images: ["/images/stackwire-social-card.png"] },
+  twitter: { card: "summary_large_image", title: "Stackwire Media | Finance, Crypto, SaaS & AI", description: "Independent, practical insights on finance, crypto, SaaS and AI.", images: ["/images/stackwire-social-card.png"] },
+  icons: { icon: [{ url: "/favicon.svg", type: "image/svg+xml"" }] }
 };
 
 function Brand() {
-  return <a className="brand" href="/" aria-label="Stackwire home">
-    <img src="/favicon.svg" width="40" height="40" alt="" />
-    <span className="brand-word">STACK<span className="brand-light">WIRE</span></span>
+  return <a className="brand" href="/" aria-label="Stackwire Media home">
+    <img src="/favicon.svg" width="38" height="38" alt="" />
+    <span className="brand-word">STACK<span>WIRE</span></span>
   </a>;
 }
 function Header() {
@@ -21,24 +22,19 @@ function Header() {
     <div className="header-inner">
       <Brand />
       <nav aria-label="Main navigation">
-        <a href="/">Home</a><a href="/finance/">Finance</a><a href="/crypto/">Crypto</a><a href="/saas-ai/">SaaS & AI</a><a href="/about/">About</a>
+        <a href="/">Home</a><a href="/finance/">Finance & Fintech</a><a href="/crypto/">Crypto & Web3</a><a href="/saas-ai/">SaaS & AI</a><a href="/about/">About</a>
       </nav>
-      <div className="header-actions">
-        <a className="search-link" href="/search/"><span aria-hidden="true">⌕</span> Search</a>
-        <a className="header-cta" href="/write-for-us/">Write for us <span>↗</span></a>
-      </div>
+      <div className="header-actions"><a className="search-link" href="/search/" aria-label="Search Stackwire"><span aria-hidden="true">⌕</span><b>Search</b></a><a className="header-cta" href="/write-for-us/">Write for us <span>↗</span></a></div>
     </div>
   </header>;
 }
 function Footer() {
-  return <footer className="site-footer">
-    <div className="footer-inner">
-      <div className="footer-brand"><Brand /><p>Clear thinking for people building what comes next.</p></div>
-      <div className="footer-links"><a href="/about/">About</a><a href="/contact/">Contact</a><a href="/privacy/">Privacy</a><a href="/editorial-policy/">Editorial policy</a><a href="/write-for-us/">Write for us</a></div>
-      <small>© {new Date().getFullYear()} Stackwire Media. For information, not financial or legal advice.</small>
-    </div>
-  </footer>;
+  return <footer className="site-footer"><div className="footer-inner">
+    <div className="footer-brand"><Brand /><p>Independent ideas and practical insight for a changing world.</p></div>
+    <div className="footer-links"><a href="/about/">About</a><a href="/contact/">Contact</a><a href="/write-for-us/">Write for us</a><a href="/editorial-policy/">Editorial policy</a><a href="/privacy/">Privacy</a></div>
+    <small>© {new Date().getFullYear()} Stackwire Media. Information is for general educational purposes and is not financial or legal advice.</small>
+  </div></footer>;
 }
 export default function RootLayout({ children }) {
-  return <html lang="en"><head><link rel="stylesheet" href="/style.css" /></head><body><a className="skip-link" href="#main">Skip to content</a><Header />{children}<Footer /></body></html>;
+  return <html lang="en"><body><a className="skip-link" href="#main">Skip to content</a><Header />{children}<Footer /></body></html>;
 }
