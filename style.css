@@ -169,3 +169,10 @@ footer .wrap{align-items:flex-start}
 .art table th:nth-child(3),.art table td:nth-child(3){width:53%}
 @media(max-width:600px){.art table,.page table{font-size:14px}.art th,.art td,.page th,.page td{padding:8px 6px}}
 
+
+
+/* Stackwire brand logo in the site header */
+.wordmark{display:flex;align-items:center;justify-content:center;gap:10px;white-space:nowrap}
+.wordmark img{display:block;width:42px;height:42px;flex:0 0 42px;border-radius:8px}
+.wordmark span{background:none;color:var(--ink);padding:0;margin:0;font:800 30px/1 var(--serif);letter-spacing:-.03em}
+@media(max-width:900px){.wordmark{justify-self:center}}
