@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="520" viewBox="0 0 1200 520" role="img" aria-labelledby="title desc">
+<title id="title">How an online card payment moves</title><desc id="desc">A customer checks out, payment details pass securely through a gateway, a processor routes an authorization request through the card network to the issuing bank, and the response returns to the merchant.</desc>
+<rect width="1200" height="520" rx="28" fill="#f4f7fb"/>
+<text x="60" y="65" font-family="Arial,sans-serif" font-size="28" font-weight="700" fill="#14213d">A simplified online card payment flow</text>
+<g font-family="Arial,sans-serif" text-anchor="middle">
+<rect x="55" y="150" width="220" height="150" rx="18" fill="#fff" stroke="#cbd5e1" stroke-width="3"/><text x="165" y="205" font-size="23" font-weight="700" fill="#14213d">1. Checkout</text><text x="165" y="245" font-size="18" fill="#475569">Customer enters</text><text x="165" y="271" font-size="18" fill="#475569">payment details</text>
+<rect x="345" y="150" width="220" height="150" rx="18" fill="#e8f1ff" stroke="#4f79b8" stroke-width="3"/><text x="455" y="205" font-size="23" font-weight="700" fill="#14213d">2. Gateway</text><text x="455" y="245" font-size="18" fill="#334155">Securely captures</text><text x="455" y="271" font-size="18" fill="#334155">and transmits data</text>
+<rect x="635" y="150" width="220" height="150" rx="18" fill="#e9f7f2" stroke="#3b8b73" stroke-width="3"/><text x="745" y="205" font-size="23" font-weight="700" fill="#14213d">3. Processor</text><text x="745" y="245" font-size="18" fill="#334155">Routes the payment</text><text x="745" y="271" font-size="18" fill="#334155">authorization request</text>
+<rect x="925" y="150" width="220" height="150" rx="18" fill="#fff4e5" stroke="#c28a39" stroke-width="3"/><text x="1035" y="205" font-size="23" font-weight="700" fill="#14213d">4. Bank decision</text><text x="1035" y="245" font-size="18" fill="#334155">Issuer approves</text><text x="1035" y="271" font-size="18" fill="#334155">or declines</text>
+<g stroke="#64748b" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M280 225h52m-14 -14 14 14 -14 14"/><path d="M570 225h52m-14 -14 14 14 -14 14"/><path d="M860 225h52m-14 -14 14 14 -14 14"/></g>
+<path d="M1035 330v70H165v-70" stroke="#64748b" stroke-width="4" stroke-dasharray="10 10" fill="none"/><path d="M151 345l14 -15 14 15" stroke="#64748b" stroke-width="4" fill="none"/>
+<text x="600" y="440" font-size="21" font-weight="700" fill="#334155">Approval or decline response returns to checkout</text>
+<text x="600" y="482" font-size="16" fill="#64748b">Capture, clearing and settlement may follow after authorization.</text>
+</g></svg>
