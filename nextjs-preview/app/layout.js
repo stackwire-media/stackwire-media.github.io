@@ -12,8 +12,8 @@ export const metadata = {
 
 function Brand() {
   return <a className="brand" href="/" aria-label="Stackwire home">
-    <img src="/favicon.svg" width="40" height="40" alt="" />
-    <span className="brand-word">STACK<span className="brand-light">WIRE</span></span>
+    <img src="/brand-mark.svg" width="40" height="40" alt="" />
+    <span className="brand-word">Stack<span className="brand-light">wire</span></span>
   </a>;
 }
 function Header() {
