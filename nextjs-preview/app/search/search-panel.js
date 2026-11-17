@@ -18,8 +18,8 @@ export default function SearchPanel() {
     <p className="search-intro">Search practical guides across finance, crypto, SaaS and AI.</p>
     <label className="search-label" htmlFor="site-query">What are you looking for?</label>
     <input id="site-query" className="search-input" type="search" value={query} onChange={event => setQuery(event.target.value)} placeholder="Try “AI pricing” or “payment processor”" autoComplete="off" />
-    <p className="search-count" aria-live="polite">{query.trim() ? \`\${results.length} \${results.length === 1 ? "guide" : "guides"} found\` : "Start typing to search all 10 guides."}</p>
+    <p className="search-count" aria-live="polite">{query.trim() ? `${results.length} ${results.length === 1 ? "guide" : "guides"} found` : "Start typing to search all 10 guides."}</p>
     {query.trim() && results.length === 0 ? <p className="search-empty">No matching guides yet. Try a broader term such as AI, payments, pricing or crypto.</p> : null}
-    <ul className="search-results">{results.map(article => <li key={article.slug}><span>{article.category}</span><h2><a href={\`/\${article.slug}/\`}>{article.title}</a></h2><p>{article.description}</p></li>)}</ul>
+    <ul className="search-results">{results.map(article => <li key={article.slug}><span>{article.category}</span><h2><a href={`/${article.slug}/`}>{article.title}</a></h2><p>{article.description}</p></li>)}</ul>
   </div></main>;
 }
