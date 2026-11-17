@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 480">
+<rect width="800" height="480" fill="#e6e1d8"/>
+<rect x="70" y="48" width="660" height="384" fill="#17283d"/>
+<circle cx="400" cy="240" r="142" fill="none" stroke="#c46d4e" stroke-width="3"/>
+<circle cx="400" cy="240" r="103" fill="none" stroke="#8c9a9d" stroke-width="2"/>
+<path d="M400 98V382M258 240H542M300 140L500 340M500 140L300 340" stroke="#8c9a9d" stroke-width="2" opacity=".7"/>
+<path d="M400 170L455 202V278L400 310L345 278V202Z" fill="#c46d4e"/>
+<path d="M400 190V290M370 220H430M370 260H430" stroke="#f7f4ed" stroke-width="7"/>
+<text x="104" y="96" fill="#e7e2d7" font-family="Georgia,serif" font-size="25">Networks &amp; trust</text>
+<text x="104" y="394" fill="#aeb9bc" font-family="Arial,sans-serif" font-size="14" letter-spacing="3">A CLEARER VIEW OF DIGITAL ASSETS</text>
+</svg>
