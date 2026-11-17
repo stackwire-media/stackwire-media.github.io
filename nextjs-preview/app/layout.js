@@ -8,7 +8,7 @@ export const metadata = {
   alternates: { canonical: "/" },
   openGraph: { type: "website", siteName: "Stackwire Media", title: "Stackwire Media | Finance, Crypto, SaaS & AI", description: "Independent, practical insights on finance and fintech, crypto and Web3, SaaS and AI.", url: "https://stackwiremedia.com/", images: ["/images/stackwire-social-card.png"] },
   twitter: { card: "summary_large_image", title: "Stackwire Media | Finance, Crypto, SaaS & AI", description: "Independent, practical insights on finance, crypto, SaaS and AI.", images: ["/images/stackwire-social-card.png"] },
-  icons: { icon: [{ url: "/favicon.svg", type: "image/svg+xml"" }] }
+  icons: { icon: [{ url: "/favicon.svg", type: "image/svg+xml" }] }
 };
 
 function Brand() {
