@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 480">
+<rect width="800" height="480" fill="#e7e2d7"/>
+<rect x="64" y="52" width="672" height="376" fill="#f7f4ed"/>
+<g stroke="#17283d" stroke-width="3" fill="none">
+<rect x="116" y="148" width="150" height="150" rx="4"/><rect x="326" y="148" width="150" height="150" rx="4"/><rect x="536" y="148" width="150" height="150" rx="4"/>
+<path d="M266 223H326M476 223H536"/>
+</g>
+<g fill="#c46d4e"><circle cx="191" cy="223" r="34"/><path d="M176 223h30M191 208v30" stroke="#f7f4ed" stroke-width="6"/><rect x="365" y="192" width="72" height="62" rx="4"/><path d="M380 210h42M380 225h42M380 240h27" stroke="#f7f4ed" stroke-width="5"/><path d="M575 246l24-24 22 15 27-35" fill="none" stroke="#c46d4e" stroke-width="8"/></g>
+<text x="116" y="112" fill="#17283d" font-family="Georgia,serif" font-size="27">From model to useful product</text>
+<text x="116" y="350" fill="#6c746f" font-family="Arial,sans-serif" font-size="15" letter-spacing="2">TOOLS · COSTS · REAL-WORLD WORKFLOWS</text>
+</svg>
