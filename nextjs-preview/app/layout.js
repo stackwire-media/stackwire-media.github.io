@@ -7,7 +7,7 @@ export const metadata = {
   description: "Practical guides on finance and fintech, crypto and Web3, SaaS and AI for founders, operators and curious readers.",
   alternates: { canonical: "/" },
   openGraph: { type: "website", siteName: "Stackwire", title: "Stackwire | Practical insight on finance, crypto and AI", description: "Practical guides for founders, operators and curious readers.", url: "https://stackwiremedia.com/", images: ["/images/stackwire-social-card.png"] },
-  icons: { icon: [{ url: "/favicon.svg", type: "image/svg+xml" }, { url: "/favicon.png", type: "image/png" }] }
+  icons: { icon: [{ url: "/favicon.svg", type: "image/svg+xml" }] }
 };
 
 function Brand() {
