@@ -11,7 +11,7 @@ export const metadata = {
   icons: { icon: [{ url: "/favicon.svg", type: "image/svg+xml" }] }
 };
 
-function Brand() {
+function SiteStructuredData() {\n  const value = {\n    "@context": "https://schema.org",\n    "@graph": [\n      { "@type": "Organization", "name": "Stackwire Media", "url": "https://stackwiremedia.com/" },\n      { "@type": "WebSite", "name": "Stackwire Media", "url": "https://stackwiremedia.com/", "inLanguage": "en" }\n    ]\n  };\n  return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(value) }} />;\n}\nfunction Brand() {
   return <a className="brand" href="/" aria-label="Stackwire Media home">
     <img src="/favicon.svg" width="38" height="38" alt="" />
     <span className="brand-word">STACK<span>WIRE</span></span>
@@ -36,5 +36,5 @@ function Footer() {
   </div></footer>;
 }
 export default function RootLayout({ children }) {
-  return <html lang="en"><body><a className="skip-link" href="#main">Skip to content</a><Header />{children}<Footer /></body></html>;
+  return <html lang="en"><body><SiteStructuredData /><a className="skip-link" href="#main">Skip to content</a><Header />{children}<Footer /></body></html>;
 }
