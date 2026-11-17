@@ -21,7 +21,7 @@ export async function generateMetadata({ params }) {
   const key = slug.join("/");
   const item = articleMap[key] || pageMap[key];
   if (item) return {
-    title: { absolute: item.title },
+    title: item.title,
     description: item.description,
     alternates: { canonical: item.canonical },
     openGraph: { title: item.ogTitle || item.title, description: item.ogDesc || item.description, url: item.canonical, type: articleMap[key] ? "article" : "website", images: ["/images/stackwire-social-card.png"] }
