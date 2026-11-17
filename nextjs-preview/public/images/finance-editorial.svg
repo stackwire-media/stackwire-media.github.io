@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 480">
+<rect width="800" height="480" fill="#e7e2d7"/>
+<rect x="60" y="52" width="680" height="376" fill="#f7f4ed"/>
+<path d="M100 360H700M100 110V360" stroke="#c9c1b4" stroke-width="2"/>
+<path d="M130 310L235 265L325 286L430 190L520 220L650 118" fill="none" stroke="#b75f43" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+<g fill="#17283d"><circle cx="130" cy="310" r="9"/><circle cx="235" cy="265" r="9"/><circle cx="325" cy="286" r="9"/><circle cx="430" cy="190" r="9"/><circle cx="520" cy="220" r="9"/><circle cx="650" cy="118" r="9"/></g>
+<rect x="105" y="80" width="185" height="52" fill="#17283d"/>
+<text x="128" y="114" fill="#f7f4ed" font-family="Georgia,serif" font-size="24">Money in motion</text>
+<path d="M565 290h105v52H565z" fill="#ded6c8"/><path d="M582 306h70M582 325h48" stroke="#7b817f" stroke-width="5"/>
+</svg>
