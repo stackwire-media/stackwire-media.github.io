@@ -1,6 +1,6 @@
-# Stackwire Next.js site
+# Stackwire Media
 
-This is the Next.js version of Stackwire Media. It uses the App Router and static export, so Cloudflare Pages serves prebuilt static files.
+This folder contains the Next.js App Router site for Stackwire Media. It is configured for static export and Vercel hosting.
 
 ## Local development
 
@@ -10,27 +10,27 @@ npm install
 npm run dev
 ```
 
-## Production build
+## Build
 
 ```bash
 npm run build
 ```
 
-The exported website is written to `out/`. For Cloudflare Pages, configure the project root as `nextjs-preview`, the build command as `npm run build`, and the build output directory as `out`.
+The static export is written to `out/`. The Vercel project should use `nextjs-preview` as its Root Directory and `npm run build` as its Build Command.
 
 ## Content and routes
 
-- All 10 existing articles are stored with their original article HTML, metadata and Article structured data in `data/articles-content.json`.
-- `data/articles.js` supplies the listing data used by the homepage and search.
+- `data/articles-content.json` stores article HTML, metadata, canonical URLs and Article structured data.
+- `data/articles.js` supplies homepage, category and search listing data.
 - `data/pages-content.json` contains the About, Contact, Privacy, Editorial Policy, Write for Us and category page content.
-- The existing clean article URLs and category/information URLs are generated as static pages.
-- Original article diagrams and image assets are in `public/images/`.
-- Existing `.html` redirects, sitemap and robots rules are copied into `public/`.
-- The search page is available at `/search/`; the old `/search.html` address redirects there.
+- Existing clean article, category and information URLs are generated as static pages.
+- Article diagrams and site assets are stored in `public/`.
+- `public/sitemap.xml` and `public/robots.txt` preserve the site's crawl discovery settings.
+- `vercel.json` handles the legacy `/search.html` redirect.
 
-## Before production launch
+## Pre-launch checks
 
-1. Review the Cloudflare Pages preview on desktop and mobile.
-2. Check all 19 existing sitemap URLs, images, navigation, metadata, canonical tags, structured data and redirects.
-3. Confirm Cloudflare Pages production settings use this folder as the project root and `out` as the output directory.
-4. Switch the production deployment only after review and approval.
+1. Review the preview on desktop and mobile.
+2. Check every sitemap URL, image, navigation link, metadata, canonical URL and structured-data block.
+3. Test the search experience and legacy redirects.
+4. Merge and promote to production only after review and approval.

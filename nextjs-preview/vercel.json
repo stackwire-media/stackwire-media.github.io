@@ -1,0 +1,9 @@
+{
+  "redirects": [
+    {
+      "source": "/search.html",
+      "destination": "/search/",
+      "permanent": true
+    }
+  ]
+}
