@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Payment Reconciliation: Match Payouts to Bank Deposits | Stackwire</title>
+<meta name="description" content="Learn how payment reconciliation works, match processor payouts to bank deposits, account for fees and refunds, and investigate settlement differences with a worked example.">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="theme-color" content="#14213D">
+<link rel="canonical" href="https://stackwiremedia.com/payment-reconciliation/">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Stackwire">
+<meta property="og:title" content="Payment Reconciliation: Match Payouts to Bank Deposits">
+<meta property="og:description" content="A practical guide to matching sales, processor reports, fees, refunds and bank deposits.">
+<meta property="og:url" content="https://stackwiremedia.com/payment-reconciliation/">
+<meta property="og:image" content="https://stackwiremedia.com/images/stackwire-social-card.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://stackwiremedia.com/images/stackwire-social-card.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/style.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Payment Reconciliation: How to Match Processor Payouts to Bank Deposits","description":"A practical guide to payment reconciliation, settlement reports, processor fees, refunds, chargebacks and bank deposits.","datePublished":"2026-11-17","dateModified":"2026-11-17","inLanguage":"en","mainEntityOfPage":"https://stackwiremedia.com/payment-reconciliation/","url":"https://stackwiremedia.com/payment-reconciliation/","articleSection":"Finance and fintech","publisher":{"@type":"Organization","name":"Stackwire","url":"https://stackwiremedia.com/"}}</script>
+</head>
+<body>
+<a class="skip" href="#top">Skip to content</a>
+<header><div class="wrap">
+<nav class="topnav" aria-label="Main"><a href="/">Home</a><a href="/finance/" aria-current="page">Finance</a><a href="/crypto/">Crypto</a><a href="/saas-ai/">SaaS and AI</a><a href="/about/">About</a><a href="/write-for-us/">Write for us</a></nav>
+<div class="brandrow"><a class="wordmark" href="/" aria-label="Stackwire home"><img src="/favicon.svg" alt="" width="42" height="42"><span>Stackwire</span></a>
+<form class="search" action="/search.html" method="get" role="search"><input type="search" name="q" placeholder="Search articles" aria-label="Search articles" required><button type="submit" class="search-submit">Search</button></form></div>
+</div></header>
+<main id="top">
+<article class="wrap art">
+<p class="tag">Finance and fintech</p>
+<h1>Payment reconciliation: how to match processor payouts to bank deposits</h1>
+<p class="meta">Published by Stackwire. Published 17 November 2026.</p>
+<p class="lede">Your payment dashboard says you made $10,000. Your bank account received $9,310. That does not automatically mean $690 has gone missing. Refunds, disputes, processing fees, reserves and payout timing can all explain the difference. Payment reconciliation is the process of proving where the money went.</p>
+<div class="answer"><strong>Quick answer</strong><p>Payment reconciliation means comparing payment records across your checkout, payment processor, accounting system and bank account to confirm that every sale, refund, fee, adjustment and payout has been recorded correctly. For card payments, a reliable process matches individual transactions to processor settlement reports, then matches the net payout to the bank statement. A clearing account can help when one bank deposit combines many customer payments.</p></div>
+<figure class="article-figure"><img src="/images/payment-reconciliation-flow.svg" alt="Payment reconciliation flow connecting customer orders, processor settlement reports, an accounting clearing account and the bank deposit" width="1200" height="500" loading="eager" decoding="async" style="display:block;width:100%;height:auto;border-radius:14px"><figcaption>Reconcile at two levels: individual payment activity and the net payout that reaches the bank.</figcaption></figure>
+
+<h2>What is payment reconciliation?</h2>
+<p><b>Payment reconciliation</b> is the process of checking that the payments a business expected to receive agree with the amounts recorded by its payment provider, accounting system and bank. It is more than checking whether a checkout was successful. A successful card authorization does not prove that the final net amount has settled or reached the bank.</p>
+<p>For an online business, one customer order may create several financial events: an authorization, a capture, a processing fee, a refund or dispute, a settlement entry and eventually a payout. A processor may group hundreds of these events into one bank deposit. Reconciliation connects those records so the finance team can explain the difference between gross sales and cash received.</p>
+<p>The term can also describe matching other payment types, such as bank transfers, direct debits, wallets or marketplace payouts. The records differ by payment method, but the principle is the same: compare independent records, identify differences and document how each one was resolved.</p>
+
+<h2>Why your sales total and bank deposit do not match</h2>
+<p>Payment providers usually pay out a net amount, not simply the total value of every order placed that day. Common reasons for a difference include:</p>
+<ul>
+<li><b>Processing fees:</b> the provider deducts transaction, network, cross-border or other agreed fees.</li>
+<li><b>Refunds:</b> refunds may be deducted from the current payout or a later settlement batch, depending on timing and provider rules.</li>
+<li><b>Chargebacks and disputes:</b> disputed payments and related fees can reduce a settlement or create a later adjustment.</li>
+<li><b>Settlement timing:</b> a payment captured today may be paid out on a later business day. Weekends, holidays, payment method and account settings can affect timing.</li>
+<li><b>Reserves and rolling holds:</b> a provider may retain part of the balance under the merchant agreement or risk controls.</li>
+<li><b>Currency conversion:</b> the processor may convert a transaction or payout at a rate that differs from the rate used in the sales system.</li>
+<li><b>Adjustments and corrections:</b> failed captures, reversed refunds, reserve releases, transfer corrections or other provider entries can appear separately from sales.</li>
+</ul>
+<p>These items should not be treated as interchangeable. A fee is an expense, a refund reverses revenue or creates a customer liability depending on the accounting policy, and a reserve is generally a timing or balance-sheet issue rather than a processing expense. The right treatment depends on the business's accounting framework and contract.</p>
+
+<h2>A worked payment reconciliation example</h2>
+<p>Imagine an online store has the following activity in one settlement batch. The figures below are illustrative, not a quote from any payment provider.</p>
+<table><thead><tr><th>Settlement item</th><th>Amount</th><th>Effect on payout</th></tr></thead><tbody>
+<tr><td>Captured card sales</td><td>$10,000</td><td>+$10,000</td></tr>
+<tr><td>Refunds deducted in this batch</td><td>$300</td><td>−$300</td></tr>
+<tr><td>Chargeback debits</td><td>$100</td><td>−$100</td></tr>
+<tr><td>Processing fees</td><td>$290</td><td>−$290</td></tr>
+<tr><td><b>Expected net payout</b></td><td><b>$9,310</b></td><td><b>$9,310</b></td></tr>
+</tbody></table>
+<p>If the bank statement shows a deposit of $9,310 with the matching payout reference, the batch reconciles. The $690 difference between gross sales and cash received is explained by the three deductions.</p>
+<p>Now imagine the bank shows $9,210 instead. Do not post a vague $100 adjustment just to make the numbers agree. Check the processor's payout detail, bank value date, currency, payout reference and any separate adjustment or reserve entry. If the provider report still says $9,310, the difference may be a bank-side fee, a second transaction or an incorrect match. Keep it open until you have evidence.</p>
+
+<h2>The four records you need</h2>
+<p>Most businesses can build a repeatable reconciliation around four sources. The names of reports vary by provider, but the information is similar.</p>
+<ol>
+<li><b>Order or sales records.</b> Your store, invoicing system or point-of-sale records show what the customer bought, the amount charged, currency, order ID and whether the sale was cancelled or refunded.</li>
+<li><b>Processor transaction and balance records.</b> These show captures, refunds, disputes, fees, adjustments and the provider's transaction references. For Stripe, the payout reconciliation report and balance transaction data help identify which activity was included in a payout.</li>
+<li><b>Settlement or payout report.</b> This groups payment activity into a settlement batch and shows the net amount scheduled or sent to the bank. Adyen's Settlement details report, for example, includes transaction entries, fees, chargebacks, refunds, payouts and other journal types.</li>
+<li><b>Bank statement.</b> This confirms the amount and date actually credited to the business's bank account. A provider status such as “paid” or “sent” is not always proof that the bank has posted the deposit.</li>
+</ol>
+<p>For accounting, many businesses also use a <b>payment clearing account</b> between sales and the bank. It records money due from the processor and is cleared as the net payout arrives. Xero explains this intermediary-account approach for processor receipts that arrive as one aggregate remittance rather than as separate deposits for each invoice.</p>
+
+<h2>How to reconcile payment processor payouts step by step</h2>
+<h3>1. Choose a consistent period and timezone</h3>
+<p>Decide whether you reconcile daily, by payout batch or monthly. Record the timezone used by the store, processor report and accounting system. A transaction can appear on different calendar dates when systems use different timezones or when the capture date and settlement date differ.</p>
+<h3>2. Match individual transactions</h3>
+<p>Use a stable identifier wherever possible: processor transaction ID, order ID, payment intent ID or merchant reference. Amount and date alone are weak matching keys because several customers can pay the same amount on the same day. Match captures, refunds and disputes to their original transactions and check that each item has the expected status.</p>
+<h3>3. Rebuild the payout total</h3>
+<p>For each settlement batch, total the captured or settled payments, then apply refunds, chargebacks, processing fees, reserves, releases and other adjustments shown in the provider report. Keep each category separate. Your calculation should produce the provider's net payout amount, not merely the gross sales figure.</p>
+<h3>4. Match the payout to the bank</h3>
+<p>Compare the expected net payout with the bank statement using the payout reference, currency, amount and value date. Allow for the provider's published payout schedule and the bank's posting time. If the provider marks a payout as sent but it has not appeared in the bank, check the provider's payout status and expected arrival window before treating it as a loss.</p>
+<h3>5. Record the accounting entries</h3>
+<p>Post sales, taxes, refunds, fees and dispute activity to the correct accounts under your accounting policy. Use a clearing account when the processor batches multiple transactions into one deposit. When the payout reaches the bank, clear the amount due from the processor and record any remaining difference to the correct fee, reserve or adjustment account. Ask your accountant to confirm the account mapping for your jurisdiction and business model.</p>
+<h3>6. Investigate and document exceptions</h3>
+<p>Keep an exception list for unmatched transactions, short or duplicate deposits, unexplained fees, missing refunds, stale reserves and currency differences. Assign an owner, record the evidence checked, note the next action and close the item only when the reason is known. Never force a reconciliation by posting an unexplained balancing amount.</p>
+
+<h2>How to use a payment clearing account</h2>
+<p>A clearing account is a temporary ledger account that helps bridge the timing difference between a customer payment and the bank payout. It is especially useful when a processor combines many card payments and deductions into one net transfer.</p>
+<p>Here is a simplified example using the $10,000 batch above:</p>
+<table><thead><tr><th>Event</th><th>Illustrative accounting effect</th></tr></thead><tbody>
+<tr><td>Customer card sales are captured</td><td>Record the sale and the amount due from the processor in the clearing account.</td></tr>
+<tr><td>Refunds and chargebacks are confirmed</td><td>Record the refund or dispute against the appropriate account and reduce the clearing balance.</td></tr>
+<tr><td>Processor fees are reported</td><td>Record processing fees as an expense and reduce the amount due from the processor.</td></tr>
+<tr><td>Net payout reaches the bank</td><td>Debit bank cash and credit the clearing account for the matching $9,310.</td></tr>
+</tbody></table>
+<p>After the batch is fully recorded, the clearing account balance for those transactions should be zero. A remaining balance is not automatically an error: it may represent captured payments that have not settled yet, an open refund, a reserve or an item that still needs investigation. The goal is to explain every open balance by transaction and expected resolution date.</p>
+
+<h2>Common payment reconciliation mistakes</h2>
+<ul>
+<li><b>Matching only by amount.</b> Use unique references and transaction IDs, not just a matching dollar value.</li>
+<li><b>Comparing sales date with bank date.</b> Capture, settlement and bank posting can happen on different dates.</li>
+<li><b>Recording only net deposits.</b> If you record the net payout as revenue, you can hide fees, refunds and disputes and distort sales reporting.</li>
+<li><b>Combining all deductions into one fee.</b> Separate processing costs, refunds, chargebacks, reserves and currency adjustments.</li>
+<li><b>Ignoring partial refunds and reversals.</b> Match each adjustment to its original payment and the period in which it is recorded.</li>
+<li><b>Leaving old differences unresolved.</b> A small unexplained difference can become difficult to trace when the supporting reports are no longer easy to retrieve.</li>
+<li><b>Assuming every provider works the same way.</b> Report names, payout timing, reserve handling and fee presentation vary. Follow the actual provider documentation and merchant agreement.</li>
+</ul>
+
+<h2>How often should a business reconcile payments?</h2>
+<p>For a business with regular card volume, daily or per-payout checks help spot missing deposits and unusual adjustments while the evidence is easy to find. A smaller business may reconcile weekly, but should still review bank deposits and processor balances regularly. Complete a month-end review to check that all settlement batches, fees, refunds, disputes and outstanding clearing balances are accounted for.</p>
+<p>Choose the frequency based on transaction volume, payout frequency, risk and the time it takes to resolve exceptions. A marketplace, subscription business or high-volume retailer may need automated transaction-level matching. A small business with a few weekly deposits may be able to use a controlled spreadsheet and monthly accounting review.</p>
+
+<h2>Payment reconciliation checklist</h2>
+<ul>
+<li>Use the same period, timezone and currency basis across reports.</li>
+<li>Match each sale, refund and dispute with a unique transaction or order reference.</li>
+<li>Confirm the processor's settlement total and every fee or adjustment.</li>
+<li>Match each net payout to the bank statement and payout reference.</li>
+<li>Record gross sales, refunds, fees and disputes separately in the ledger.</li>
+<li>Review the payment clearing account and explain every remaining balance.</li>
+<li>Keep supporting reports and a dated exception log.</li>
+<li>Escalate unexplained differences instead of creating unsupported balancing entries.</li>
+</ul>
+
+<h2>Frequently asked questions</h2>
+<h3>What is an example of payment reconciliation?</h3>
+<p>A store records $10,000 in card sales. The processor deducts $300 in refunds, $100 in chargebacks and $290 in fees, then sends $9,310 to the bank. Reconciliation matches the original sales and deductions to the processor report and confirms that the $9,310 deposit reached the bank.</p>
+<h3>What is the difference between payment reconciliation and bank reconciliation?</h3>
+<p>Bank reconciliation compares the business's accounting records with its bank statement. Payment reconciliation looks further upstream: it connects orders and payment transactions to processor fees, refunds, settlement batches and the eventual bank deposit. Payment reconciliation often supplies the detail needed to complete bank reconciliation accurately.</p>
+<h3>Why is my payment processor payout lower than sales?</h3>
+<p>It may be lower because the provider deducted processing fees, refunds, chargebacks, reserves or other adjustments. It may also include only transactions that reached the relevant settlement batch by the cutoff time. Use the payout detail report to identify the exact components rather than assuming the difference is a fee.</p>
+<h3>What is a payment clearing account?</h3>
+<p>It is a temporary accounting account used to record amounts due from a payment processor before the provider sends the net payout to the bank. It helps match many customer transactions and deductions to one bank deposit. The account should be reviewed and its remaining balance explained regularly.</p>
+<h3>Can payment reconciliation be automated?</h3>
+<p>Yes. Accounting integrations and reconciliation software can import processor reports, match transaction references and flag exceptions. Automation still needs clear matching rules, accurate source data and human review for unmatched or unusual items. A green “matched” status is useful only if the underlying match is correct.</p>
+
+<h2>How payment reconciliation fits into the wider payment process</h2>
+<p>Reconciliation is easier when you understand the roles of the companies handling the payment. If you need a refresher, read our guides to <a href="/merchant-account/">merchant accounts</a>, <a href="/payment-gateway-vs-payment-processor/">payment gateways and processors</a>, and <a href="/choosing-a-payment-processor/">choosing a payment processor</a>. They explain the payment flow, provider models and pricing terms that affect the records you reconcile.</p>
+<p>For more detailed provider-specific examples, consult the original documentation: <a href="https://support.stripe.com/questions/find-what-transactions-were-included-in-or-impacted-a-payout-amount?locale=en-GB" target="_blank" rel="noopener noreferrer">Stripe's payout reconciliation guidance</a>, <a href="https://docs.adyen.com/reporting/settlement-reconciliation/transaction-level/settlement-details-report/" target="_blank" rel="noopener noreferrer">Adyen's Settlement details report</a>, and <a href="https://developer.xero.com/documentation/guides/how-to-guides/handling-payment-processor-receipts-in-xero/" target="_blank" rel="noopener noreferrer">Xero's guide to payment processor receipts</a>.</p>
+<p class="note">This article is general educational information, not accounting, tax or legal advice. Report structures, settlement timing and accounting treatment vary by provider, contract, country and payment method. Confirm the correct treatment with a qualified accountant.</p>
+</article>
+</main>
+<footer><div class="wrap"><div><a href="/about/">About</a><a href="/contact/">Contact</a><a href="/privacy/">Privacy</a><a href="/editorial-policy/">Editorial standards</a><a href="/write-for-us/">Write for us</a></div><div>Content on Stackwire is for information only and is not financial, legal or investment advice.</div></div></footer>
+</body>
+</html>
