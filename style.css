@@ -472,3 +472,50 @@ body.home-page{background:var(--paper);color:var(--ink);font:400 15px/1.55 var(-
  .listwrap .posts li.post-with-image{grid-template-columns:1fr}
  .listwrap .post-thumb{height:175px}
 }
+
+
+/* Mobile category-page usability refinements */
+@media(max-width:760px){
+  html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
+  header .wrap{padding-top:0;padding-bottom:10px}
+  .topnav{
+    justify-content:flex-start;
+    gap:20px;
+    padding:10px 0 8px;
+    margin:0;
+    overflow-x:auto;
+    scrollbar-width:none;
+    -ms-overflow-style:none;
+    font-size:14px;
+    -webkit-overflow-scrolling:touch;
+  }
+  .topnav::-webkit-scrollbar{display:none}
+  .brandrow{grid-template-columns:minmax(0,1fr);gap:9px}
+  .wordmark{grid-column:1;justify-self:center}
+  .wordmark img{width:30px;height:30px;flex-basis:30px}
+  .wordmark span{font-size:25px}
+  .search{grid-column:1;grid-row:auto;justify-self:center;width:min(100%,420px);gap:8px}
+  .search input[type=search]{width:100%;min-width:0;padding:9px 14px;font-size:15px}
+  .search .search-submit{flex:0 0 auto;padding:9px 15px;font-size:14px}
+  .cat-head{padding-top:26px;padding-bottom:8px}
+  .cat-head h1{font-size:clamp(30px,8vw,38px);line-height:1.08;margin-bottom:8px}
+  .cat-head p{font-size:15px;line-height:1.5;max-width:54ch}
+  .cat-head p+p{margin-top:5px}
+  .category-hero-image{width:calc(100% - 32px);margin:10px auto 16px}
+  .category-hero-image img{height:clamp(135px,38vw,185px);object-fit:cover}
+  .listwrap{padding-bottom:36px}
+  .listwrap .posts li.post-with-image{grid-template-columns:112px minmax(0,1fr);gap:13px;align-items:start;padding:15px 0}
+  .listwrap .post-thumb{height:94px}
+  .listwrap .post-copy h2{font-size:clamp(18px,5vw,22px);line-height:1.18}
+  .listwrap .post-copy p{font-size:13px;line-height:1.42}
+  footer .wrap{gap:12px}
+  footer{font-size:12px;padding:24px 0 32px}
+}
+@media(max-width:420px){
+  .topnav{gap:17px;font-size:13px}
+  .cat-head{padding-top:22px}
+  .cat-head p{font-size:14px;line-height:1.48}
+  .category-hero-image img{height:145px}
+  .listwrap .posts li.post-with-image{grid-template-columns:100px minmax(0,1fr);gap:11px}
+  .listwrap .post-thumb{height:88px}
+}
