@@ -1,0 +1,110 @@
+{
+  "redirects": [
+    {
+      "source": "/index.html",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/about.html",
+      "destination": "/about/",
+      "permanent": true
+    },
+    {
+      "source": "/ai-agent-cost-per-task.html",
+      "destination": "/ai-agent-cost-per-task/",
+      "permanent": true
+    },
+    {
+      "source": "/ai-agent-payments-safely.html",
+      "destination": "/ai-agent-payments-safely/",
+      "permanent": true
+    },
+    {
+      "source": "/calculating-ai-api-costs.html",
+      "destination": "/calculating-ai-api-costs/",
+      "permanent": true
+    },
+    {
+      "source": "/choosing-a-payment-processor.html",
+      "destination": "/choosing-a-payment-processor/",
+      "permanent": true
+    },
+    {
+      "source": "/contact.html",
+      "destination": "/contact/",
+      "permanent": true
+    },
+    {
+      "source": "/crypto.html",
+      "destination": "/crypto/",
+      "permanent": true
+    },
+    {
+      "source": "/editorial-policy.html",
+      "destination": "/editorial-policy/",
+      "permanent": true
+    },
+    {
+      "source": "/finance.html",
+      "destination": "/finance/",
+      "permanent": true
+    },
+    {
+      "source": "/merchant-account.html",
+      "destination": "/merchant-account/",
+      "permanent": true
+    },
+    {
+      "source": "/payment-gateway-vs-payment-processor.html",
+      "destination": "/payment-gateway-vs-payment-processor/",
+      "permanent": true
+    },
+    {
+      "source": "/pricing-ai-features-saas.html",
+      "destination": "/pricing-ai-features-saas/",
+      "permanent": true
+    },
+    {
+      "source": "/privacy.html",
+      "destination": "/privacy/",
+      "permanent": true
+    },
+    {
+      "source": "/rag-vs-fine-tuning.html",
+      "destination": "/rag-vs-fine-tuning/",
+      "permanent": true
+    },
+    {
+      "source": "/saas-ai.html",
+      "destination": "/saas-ai/",
+      "permanent": true
+    },
+    {
+      "source": "/search.html",
+      "destination": "/search/",
+      "permanent": true
+    },
+    {
+      "source": "/stablecoin-rules-us-founders.html",
+      "destination": "/stablecoin-rules-us-founders/",
+      "permanent": true
+    },
+    {
+      "source": "/usdc-payments-for-businesses.html",
+      "destination": "/usdc-payments-for-businesses/",
+      "permanent": true
+    },
+    {
+      "source": "/write-for-us.html",
+      "destination": "/write-for-us/",
+      "permanent": true
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/search/",
+      "destination": "/search.html"
+    }
+  ]
+}
