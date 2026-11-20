@@ -614,3 +614,34 @@ a{text-underline-offset:3px}
  .listwrap .posts li.post-with-image{grid-template-columns:100px minmax(0,1fr)}
  .home-page .latest-grid{grid-template-columns:1fr}
 }
+
+
+/* Final visual QA: keep category and featured images in proportion */
+.category-hero-image img{
+  height:clamp(180px,20vw,250px);
+  object-position:center 46%;
+}
+.home-page .lead-image{
+  height:clamp(320px,38vw,500px);
+  min-height:0;
+}
+.home-page .lead-image img{
+  height:100%;
+  min-height:0;
+  object-fit:cover;
+  object-position:70% center;
+}
+@media(max-width:900px){
+  .home-page .lead-image,
+  .home-page .lead-image img{
+    height:clamp(230px,48vw,390px);
+    min-height:0;
+  }
+}
+@media(max-width:600px){
+  .home-page .lead-image,
+  .home-page .lead-image img{
+    height:260px;
+    min-height:0;
+  }
+}
