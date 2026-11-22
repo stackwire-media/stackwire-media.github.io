@@ -27,7 +27,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800&family=Source+Sans+3:wght@400;500;600&display=swap" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800&family=Source+Sans+3:wght@400;500;600&display=swap"></noscript>
 <link rel="stylesheet" href="/style.css">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"How Can Businesses Let AI Agents Make Payments Safely?","description":"A practical guide to controlling AI agent payments, verifying suppliers and keeping business approval in place.","datePublished":"2026-11-10","dateModified":"2026-11-10","inLanguage":"en","mainEntityOfPage":"https://www.stackwiremedia.com/ai-agent-payments-safely/","articleSection":"SaaS and AI","image":"https://images.pexels.com/photos/6694475/pexels-photo-6694475.jpeg?auto=compress&dpr=1&h=750&w=1260","publisher":{"@type":"Organization","name":"Stackwire","url":"https://www.stackwiremedia.com/"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"How Can Businesses Let AI Agents Make Payments Safely?","description":"A practical guide to controlling AI agent payments, verifying suppliers and keeping business approval in place.","datePublished":"2026-11-10","dateModified":"2026-11-22","inLanguage":"en","mainEntityOfPage":"https://www.stackwiremedia.com/ai-agent-payments-safely/","articleSection":"SaaS and AI","image":"https://images.pexels.com/photos/6694475/pexels-photo-6694475.jpeg?auto=compress&dpr=1&h=750&w=1260","publisher":{"@type":"Organization","name":"Stackwire","url":"https://www.stackwiremedia.com/"}}</script>
 <style>
 .article-figure{margin:24px 0 30px}.article-figure img{display:block;width:100%;height:auto;max-height:420px;object-fit:cover;border-radius:8px}.article-figure figcaption{font-size:14px;color:var(--muted);margin-top:8px}
 .workflow{margin:26px 0 32px;padding:18px;border:1px solid var(--rule);border-radius:8px;background:#fff}.workflow ol{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,1fr);gap:10px}.workflow li{border-top:3px solid var(--signal);padding:12px 10px;background:var(--paper);font-size:15px}.workflow b{display:block;margin-bottom:4px}.workflow .stepno{font-size:12px;color:var(--signal);font-weight:700}.workflow figcaption{font-size:14px;color:var(--muted);margin-top:12px}
@@ -116,6 +116,31 @@
 <p>A reliable system needs clear authorization, verified suppliers, restricted credentials and a way to stop unusual transactions.</p>
 <p><strong>The goal is not to give an AI agent control over company money. It is to let the agent complete specific, approved tasks while the business keeps control.</strong></p>
 
+<h2>Turn payment authority into explicit, testable rules</h2>
+<p>An AI agent should not infer that it has permission to pay simply because it can access an invoice, read a supplier email or call a payment API. The business must define authority outside the model's conversational reasoning and enforce it in the systems that execute the payment.</p>
+<table><thead><tr><th>Control</th><th>Implementation question</th><th>Evidence to retain</th></tr></thead><tbody>
+<tr><td>Identity</td><td>How does the system verify the agent, employee, supplier and payment endpoint?</td><td>Authenticated identities, signed requests and approved supplier records.</td></tr>
+<tr><td>Intent and scope</td><td>What invoice, supplier, currency, amount and purpose is the agent allowed to act on?</td><td>Approved instruction, invoice ID and policy version.</td></tr>
+<tr><td>Limits</td><td>What are the per-payment, daily, supplier and cumulative spending caps?</td><td>Policy decision and limit evaluation result.</td></tr>
+<tr><td>Separation of duties</td><td>Can the same agent create a supplier, change bank details and approve a payment?</td><td>Distinct roles, approval records and exception logs.</td></tr>
+<tr><td>Execution</td><td>Can the payment API enforce idempotency, allowlists and transaction-specific credentials?</td><td>Payment reference, idempotency key and execution response.</td></tr>
+<tr><td>Monitoring and recovery</td><td>Can finance stop the workflow, revoke credentials and investigate an anomaly?</td><td>Alerts, immutable audit events and incident records.</td></tr>
+</tbody></table>
+<h2>Defend against prompt injection and supplier impersonation</h2>
+<p>Payment workflows ingest untrusted content: invoices, email threads, PDFs, supplier portals and messages. An attacker may try to place instructions in that content telling an agent to ignore its normal process, change a beneficiary or send sensitive information. Treat all externally supplied text and documents as data to be checked, not as instructions that can override payment policy.</p>
+<p>Use allowlisted suppliers and independently verified beneficiary details. A bank-account change should trigger a separate verification process using a previously trusted contact channel, not a phone number or link supplied in the change request itself. The agent may prepare a change request, but an authorized human should verify it through the company's established controls.</p>
+<h2>Where payment protocols fit, and where they do not</h2>
+<p>Google's Agent Payments Protocol (AP2) describes cryptographically verifiable mandates for expressing and recording payment intent. Visa's Trusted Agent Protocol focuses on authenticating agent-originated requests and helping merchants recognize trusted agents. These approaches address parts of the trust and authorization problem; they do not replace a company's supplier verification, approval matrix, sanctions checks, accounting controls or incident response.</p>
+<p>In October 2026, Visa, BILL and Billtrust announced a live pilot for approved buyer invoice payments through supplier portals. Visa described agent authentication, tokenized credentials, payment controls tied to approved instructions and transaction visibility. This is evidence of a specific pilot, not proof that unattended agent payments are safe for every business or universally available. See the <a href="https://corporate.visa.com/en/sites/visa-perspectives/newsroom/visa-bill-billtrust-launch-pilot.html" rel="noopener">Visa announcement</a> and the <a href="https://developers.googleblog.com/developers-guide-to-ai-agent-protocols/" rel="noopener">Google Developers guide to agent protocols</a>.</p>
+<h2>A safe rollout path for finance teams</h2>
+<ol>
+<li><b>Observe:</b> let the agent read invoices and prepare payment proposals without access to payment credentials.</li>
+<li><b>Recommend:</b> compare extracted details with approved supplier and purchase-order records; route mismatches to a person.</li>
+<li><b>Approve:</b> require an authorized employee to approve the exact supplier, invoice, amount and payment date.</li>
+<li><b>Execute within limits:</b> only then allow a narrowly scoped service to submit the approved payment, with idempotency and transaction limits.</li>
+<li><b>Reconcile and audit:</b> match the payment confirmation to the invoice and bank statement, and retain a trace of the instruction, approval and execution.</li>
+</ol>
+<p>Begin with low-risk, low-value transactions and measure false matches, exception rates, duplicate attempts and time saved. Expand authority only after controls have been tested under failure conditions. For cost planning, see <a href="/ai-agent-cost-per-task/">AI agent cost per task</a>; for the payment infrastructure, see <a href="/payment-gateway-vs-payment-processor/">payment gateway vs processor</a>.</p>
 <h2>Frequently asked questions</h2>
 <h3>Can AI agents make payments without human approval?</h3>
 <p>Some systems can execute payments under instructions authorized in advance. Whether a payment can proceed without a person depends on the payment system and the business's approval rules.</p>
