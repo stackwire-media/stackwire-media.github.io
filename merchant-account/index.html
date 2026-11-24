@@ -5,15 +5,15 @@
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());</script>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>What Is a Merchant Account? How It Works | Stackwire</title>
-<meta name="description" content="Learn what a merchant account does, how card payments reach your business, how it differs from a processor, and which fees and risks to compare.">
+<title>Merchant Account vs Payment Gateway: Key Differences | Stackwire</title>
+<meta name="description" content="Understand what a merchant account does, how it differs from a payment gateway and processor, what fees apply, and how payouts and reserves work.">
 <meta name="robots" content="index, follow, max-image-preview:large">
 <meta name="theme-color" content="#14213D">
 <link rel="canonical" href="https://www.stackwiremedia.com/merchant-account/">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="Stackwire">
-<meta property="og:title" content="What Is a Merchant Account? How It Works">
+<meta property="og:title" content="Merchant Account vs Payment Gateway: Key Differences">
 <meta property="og:description" content="Where card payments go after checkout, how merchant accounts work, and what businesses should compare.">
 <meta property="og:url" content="https://www.stackwiremedia.com/merchant-account/">
 <meta property="og:image" content="https://images.pexels.com/photos/3570237/pexels-photo-3570237.jpeg?auto=compress&cs=tinysrgb&w=900">
@@ -60,6 +60,17 @@
 <tr><td>May be a dedicated merchant account or a provider-managed sub-account arrangement.</td><td>Usually held in the business's name, subject to the bank's onboarding requirements.</td></tr>
 </tbody></table>
 <p>Some payment platforms make the distinction less visible because they show a single balance and payout dashboard. That interface does not necessarily mean the underlying funds are held in a traditional merchant account in the business's own name. Ask the provider how the arrangement works legally and operationally.</p>
+
+<h2>Payment gateway vs merchant account: what's the difference?</h2>
+<p>A payment gateway and a merchant account do different jobs in a card-payment setup. The gateway is the checkout-facing technology that securely captures or transmits payment details. The merchant account is part of the acquiring arrangement used to receive or record card-payment proceeds during settlement. One is not a replacement for the other.</p>
+<table><thead><tr><th>Payment gateway</th><th>Merchant account</th></tr></thead><tbody>
+<tr><td>Connects the website, app or point-of-sale checkout to the payment system.</td><td>Forms part of the merchant's acquiring and funds-settlement arrangement.</td></tr>
+<tr><td>Helps securely transmit payment information and may provide hosted checkout, tokenization or payment integrations.</td><td>Receives or records settled card-payment proceeds under the provider's account model.</td></tr>
+<tr><td>Does not, by itself, mean the merchant has an acquiring relationship or that funds are held for payout.</td><td>Does not, by itself, provide the checkout interface or payment-data transmission technology.</td></tr>
+<tr><td>May be supplied separately or bundled into a payment service provider.</td><td>May be a dedicated merchant account or part of a payment facilitator / connected-account arrangement.</td></tr>
+</tbody></table>
+<p>Many all-in-one providers bundle gateway, processing and acquiring-related services behind one integration and dashboard. That can make the distinction less visible, but the functions and contractual responsibilities still matter. Ask the provider which entity supplies each service, where funds are held during settlement, and who is responsible for refunds, disputes and payouts.</p>
+<p>For a step-by-step explanation of checkout and transaction routing, read <a href="/payment-gateway-vs-payment-processor/">payment gateway vs payment processor</a>.</p>
 
 <h2>How does a merchant account work?</h2>
 <p>The key is to separate <b>authorization</b> from <b>settlement</b>. An approval at checkout does not mean the money has already reached the business's bank account.</p>
