@@ -5,15 +5,15 @@
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());</script>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>What Is a Merchant Account? How It Works | Stackwire</title>
-<meta name="description" content="Learn what a merchant account does, how card payments reach your business, how it differs from a processor, and which fees and risks to compare.">
+<title>Merchant Account vs Payment Gateway: Key Differences | Stackwire</title>
+<meta name="description" content="Understand what a merchant account does, how it differs from a payment gateway and processor, what fees apply, and how payouts and reserves work.">
 <meta name="robots" content="index, follow, max-image-preview:large">
 <meta name="theme-color" content="#14213D">
 <link rel="canonical" href="https://www.stackwiremedia.com/merchant-account/">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="Stackwire">
-<meta property="og:title" content="What Is a Merchant Account? How It Works">
+<meta property="og:title" content="Merchant Account vs Payment Gateway: Key Differences">
 <meta property="og:description" content="Where card payments go after checkout, how merchant accounts work, and what businesses should compare.">
 <meta property="og:url" content="https://www.stackwiremedia.com/merchant-account/">
 <meta property="og:image" content="https://images.pexels.com/photos/3570237/pexels-photo-3570237.jpeg?auto=compress&cs=tinysrgb&w=900">
@@ -23,7 +23,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800&family=Source+Sans+3:wght@400;500;600&display=swap" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800&family=Source+Sans+3:wght@400;500;600&display=swap"></noscript>
 <link rel="stylesheet" href="/style.css">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"What Is a Merchant Account? Where Does Your Customer's Money Actually Go?","description":"A practical guide to merchant accounts, card-payment settlement, provider models, fees and business risks.","datePublished":"2026-11-13","dateModified":"2026-11-13","inLanguage":"en","mainEntityOfPage":"https://www.stackwiremedia.com/merchant-account/","url":"https://www.stackwiremedia.com/merchant-account/","articleSection":"Finance and fintech","publisher":{"@type":"Organization","name":"Stackwire","url":"https://www.stackwiremedia.com/"},"image":"https://images.pexels.com/photos/3570237/pexels-photo-3570237.jpeg?auto=compress&cs=tinysrgb&w=900"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"What Is a Merchant Account? Where Does Your Customer's Money Actually Go?","description":"A practical guide to merchant accounts, card-payment settlement, provider models, fees and business risks.","datePublished":"2026-11-13","dateModified":"2026-11-22","inLanguage":"en","mainEntityOfPage":"https://www.stackwiremedia.com/merchant-account/","url":"https://www.stackwiremedia.com/merchant-account/","articleSection":"Finance and fintech","publisher":{"@type":"Organization","name":"Stackwire","url":"https://www.stackwiremedia.com/"},"image":"https://images.pexels.com/photos/3570237/pexels-photo-3570237.jpeg?auto=compress&cs=tinysrgb&w=900","author":{"@type":"Organization","name":"Stackwire","url":"https://www.stackwiremedia.com/about/"}}</script>
 <link rel="preload" as="image" href="https://images.pexels.com/photos/3570237/pexels-photo-3570237.jpeg?auto=compress&cs=tinysrgb&w=900" fetchpriority="high">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is a merchant account in simple terms?","acceptedAnswer":{"@type":"Answer","text":"It is an account arrangement that lets a business accept card payments. In a traditional setup, the acquirer uses it to receive settled card-payment funds before paying the available balance to the business's bank account."}},{"@type":"Question","name":"Do I need a merchant account to accept credit cards?","acceptedAnswer":{"@type":"Answer","text":"You need an acquiring or payment-provider arrangement that can process card payments, but you may not need to open a separate merchant account yourself. An all-in-one PSP or payment facilitator may provide access through its platform."}},{"@type":"Question","name":"Is a merchant account a bank account?","acceptedAnswer":{"@type":"Answer","text":"It is not the same as the business's everyday bank account. A traditional merchant account is part of the acquiring arrangement for card payments. The provider typically pays out funds to the business's nominated bank account."}},{"@type":"Question","name":"What is the difference between a merchant account and a payment processor?","acceptedAnswer":{"@type":"Answer","text":"The merchant account is the account arrangement used to receive or manage card-payment proceeds during settlement. The processor handles transaction messages and processing between the merchant, acquirer, card networks and banks. A provider may supply both services."}},{"@type":"Question","name":"How long does it take to receive money from a merchant account?","acceptedAnswer":{"@type":"Answer","text":"There is no universal timeline. It depends on the country, payment method, provider, settlement schedule, bank-transfer timing, account history and any review or reserve. Check the provider's written payout terms."}},{"@type":"Question","name":"Can a small business get a merchant account?","acceptedAnswer":{"@type":"Answer","text":"Many small businesses can accept card payments through an acquirer or payment facilitator if they meet the provider's eligibility and verification requirements. Available providers and rules differ by country and business type."}},{"@type":"Question","name":"Why would a merchant account be frozen or put on hold?","acceptedAnswer":{"@type":"Answer","text":"A provider may review unusual transaction activity, suspected fraud, disputes, incomplete verification or potential violations of its terms. The agreement should explain review, reserve and payout procedures. Contact the provider for the specific reason and the steps needed to resolve it."}}]}</script>
 </head>
@@ -38,7 +38,7 @@
 <article class="wrap art">
 <p class="tag">Finance and fintech</p>
 <h1>What is a merchant account? Where does your customer's money actually go?</h1>
-<p class="meta">Published by Stackwire. Published 13 November 2026.</p>
+<p class="meta">Published by Stackwire. Published 13 November 2026. Updated 22 November 2026.</p>
 <p class="lede">A merchant account is a payment account used by an acquiring bank or payment provider to receive and manage funds from card transactions before they are paid out to a business. It is one part of the card-payment system, not simply another name for the business's everyday bank account.</p>
 <figure class="stock-photo">
 <img srcset="https://images.pexels.com/photos/3570237/pexels-photo-3570237.jpeg?auto=compress&cs=tinysrgb&w=480  480w, https://images.pexels.com/photos/3570237/pexels-photo-3570237.jpeg?auto=compress&cs=tinysrgb&w=900  900w, https://images.pexels.com/photos/3570237/pexels-photo-3570237.jpeg?auto=compress&cs=tinysrgb&w=900  1400w" sizes="(max-width: 760px) 100vw, 1040px" srcset="https://images.pexels.com/photos/3570237/pexels-photo-3570237.jpeg?auto=compress&cs=tinysrgb&w=480 480w, https://images.pexels.com/photos/3570237/pexels-photo-3570237.jpeg?auto=compress&cs=tinysrgb&w=900 900w" sizes="(max-width: 760px) 100vw, 1040px" src="https://images.pexels.com/photos/3570237/pexels-photo-3570237.jpeg?auto=compress&cs=tinysrgb&w=900" alt="Payment terminal and transaction receipts arranged on a desk" width="1400" height="933" loading="eager" fetchpriority="high" decoding="async">
@@ -60,6 +60,17 @@
 <tr><td>May be a dedicated merchant account or a provider-managed sub-account arrangement.</td><td>Usually held in the business's name, subject to the bank's onboarding requirements.</td></tr>
 </tbody></table>
 <p>Some payment platforms make the distinction less visible because they show a single balance and payout dashboard. That interface does not necessarily mean the underlying funds are held in a traditional merchant account in the business's own name. Ask the provider how the arrangement works legally and operationally.</p>
+
+<h2>Payment gateway vs merchant account: what's the difference?</h2>
+<p>A payment gateway and a merchant account do different jobs in a card-payment setup. The gateway is the checkout-facing technology that securely captures or transmits payment details. The merchant account is part of the acquiring arrangement used to receive or record card-payment proceeds during settlement. One is not a replacement for the other.</p>
+<table><thead><tr><th>Payment gateway</th><th>Merchant account</th></tr></thead><tbody>
+<tr><td>Connects the website, app or point-of-sale checkout to the payment system.</td><td>Forms part of the merchant's acquiring and funds-settlement arrangement.</td></tr>
+<tr><td>Helps securely transmit payment information and may provide hosted checkout, tokenization or payment integrations.</td><td>Receives or records settled card-payment proceeds under the provider's account model.</td></tr>
+<tr><td>Does not, by itself, mean the merchant has an acquiring relationship or that funds are held for payout.</td><td>Does not, by itself, provide the checkout interface or payment-data transmission technology.</td></tr>
+<tr><td>May be supplied separately or bundled into a payment service provider.</td><td>May be a dedicated merchant account or part of a payment facilitator / connected-account arrangement.</td></tr>
+</tbody></table>
+<p>Many all-in-one providers bundle gateway, processing and acquiring-related services behind one integration and dashboard. That can make the distinction less visible, but the functions and contractual responsibilities still matter. Ask the provider which entity supplies each service, where funds are held during settlement, and who is responsible for refunds, disputes and payouts.</p>
+<p>For a step-by-step explanation of checkout and transaction routing, read <a href="/payment-gateway-vs-payment-processor/">payment gateway vs payment processor</a>.</p>
 
 <h2>How does a merchant account work?</h2>
 <p>The key is to separate <b>authorization</b> from <b>settlement</b>. An approval at checkout does not mean the money has already reached the business's bank account.</p>
@@ -152,6 +163,28 @@
 <li><b>“The provider can never hold my money.”</b> Payouts may be delayed or reserves applied under the provider's agreement and applicable rules. Read those terms before signing.</li>
 </ul>
 
+<h2>Follow the money: authorization is not settlement</h2>
+<p>One of the most common sources of confusion is treating an approved card payment as money already deposited in the merchant's bank account. These are separate stages. Authorization asks the issuer whether the transaction can proceed. Capture tells the payment provider to collect an authorized amount. Clearing and settlement then move the financial obligations and funds through the relevant institutions. The merchant's payout schedule determines when the funds become available in its bank account.</p>
+<table><thead><tr><th>Stage</th><th>What happens</th><th>What the merchant should monitor</th></tr></thead><tbody>
+<tr><td>Authorization</td><td>The issuer approves or declines the request, sometimes after authentication or risk checks.</td><td>Approval rate, decline reasons, duplicate requests and authorization expiry.</td></tr>
+<tr><td>Capture</td><td>The merchant submits an authorized amount for collection, immediately or later depending on its flow.</td><td>Uncaptured authorizations, partial captures, reversals and capture deadlines.</td></tr>
+<tr><td>Clearing</td><td>Transaction details are exchanged and financial obligations are calculated through the payment system.</td><td>Reconciliation records, adjustments and fees.</td></tr>
+<tr><td>Settlement and payout</td><td>Funds move through the acquiring and banking arrangements and are paid to the merchant under its agreement.</td><td>Settlement reports, reserves, holds, payout timing and net deposits.</td></tr>
+</tbody></table>
+<p>The exact terminology and sequence can vary by payment method and provider. For a merchant, the practical question is not only “Was the payment approved?” but also “Was it captured, included in settlement, and included in the payout I expected?”</p>
+<h2>Read the merchant agreement for the risks behind a payout hold</h2>
+<p>A provider may delay or reserve funds when its risk controls identify unusual transaction patterns, elevated disputes, suspected fraud, changes in the business model or other events described in the agreement. A hold is not necessarily proof of wrongdoing, and the provider's contract and applicable law determine what it can do.</p>
+<p>Before signing, find the clauses covering reserves, rolling reserves, delayed payouts, account reviews, termination, negative balances and dispute fees. Ask what triggers a review, how the provider communicates it, what evidence it may request and how a merchant can appeal or resolve the issue. Do not base cash-flow planning on the fastest advertised payout time alone.</p>
+<h2>Merchant account due-diligence checklist</h2>
+<ul>
+<li>Confirm the legal entity providing acquiring or payment-facilitation services in each country where you sell.</li>
+<li>Ask whether you receive a dedicated merchant account or operate under a payment facilitator's master arrangement.</li>
+<li>Model the effective rate using your actual average ticket, card mix, transaction geography, refunds and disputes.</li>
+<li>Check payout timing, reserve rights, settlement currency, conversion spreads and payout fees.</li>
+<li>Test how refunds, partial captures, chargebacks, recurring payments and failed webhooks appear in reports.</li>
+<li>Confirm what happens to customer payment tokens and recurring billing if you change providers.</li>
+</ul>
+<p>A merchant account is one part of the payment setup, not a guarantee of instant settlement or protection from disputes. For the wider technology flow, read <a href="/payment-gateway-vs-payment-processor/">payment gateway vs payment processor</a>. To compare the commercial cost, use our <a href="/choosing-a-payment-processor/">payment processing fee guide</a>.</p>
 <h2>Frequently asked questions</h2>
 <h3>What is a merchant account in simple terms?</h3>
 <p>It is an account arrangement that lets a business accept card payments. In a traditional setup, the acquirer uses it to receive settled card-payment funds before paying the available balance to the business's bank account.</p>

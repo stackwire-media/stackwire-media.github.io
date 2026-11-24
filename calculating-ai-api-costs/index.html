@@ -27,7 +27,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800&family=Source+Sans+3:wght@400;500;600&display=swap" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800&family=Source+Sans+3:wght@400;500;600&display=swap"></noscript>
 <link rel="stylesheet" href="/style.css">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"How to Calculate AI API Costs Before You Ship","description":"A practical method for estimating AI API cost per task and per month, including tokens, retries, caching and model choice.","datePublished":"2026-11-09","dateModified":"2026-11-10","inLanguage":"en","mainEntityOfPage":"https://www.stackwiremedia.com/calculating-ai-api-costs/","url":"https://www.stackwiremedia.com/calculating-ai-api-costs/","articleSection":"SaaS and AI","publisher":{"@type":"Organization","name":"Stackwire","url":"https://www.stackwiremedia.com/"},"image":"https://images.pexels.com/photos/36496927/pexels-photo-36496927.jpeg?auto=compress&cs=tinysrgb&w=900"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"How to Calculate AI API Costs Before You Ship","description":"A practical method for estimating AI API cost per task and per month, including tokens, retries, caching and model choice.","datePublished":"2026-11-09","dateModified":"2026-11-22","inLanguage":"en","mainEntityOfPage":"https://www.stackwiremedia.com/calculating-ai-api-costs/","url":"https://www.stackwiremedia.com/calculating-ai-api-costs/","articleSection":"SaaS and AI","publisher":{"@type":"Organization","name":"Stackwire","url":"https://www.stackwiremedia.com/"},"image":"https://images.pexels.com/photos/36496927/pexels-photo-36496927.jpeg?auto=compress&cs=tinysrgb&w=900","author":{"@type":"Organization","name":"Stackwire","url":"https://www.stackwiremedia.com/about/"}}</script>
 <style>
 #api-cost-calculator .calc-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(140px,220px);gap:10px 16px;align-items:center;margin:14px 0}
 #api-cost-calculator label{font-weight:600}
@@ -49,7 +49,7 @@
 <article class="wrap art">
 <p class="tag">SaaS and AI</p>
 <h1>How to calculate AI API costs before you ship a feature</h1>
-<p class="meta">Published by Stackwire. Published 9 November 2026. Updated 10 November 2026.</p>
+<p class="meta">Published by Stackwire. Published 9 November 2026. Updated 22 November 2026.</p>
 <p class="lede">An AI feature can look inexpensive in a demo and become a margin problem after customers use it every day. The fix is not guesswork. Estimate the cost of one completed task, multiply it by realistic usage, then test the assumptions against real API logs.</p>
 <figure class="stock-photo">
 <img srcset="https://images.pexels.com/photos/36496927/pexels-photo-36496927.jpeg?auto=compress&cs=tinysrgb&w=480 480w, https://images.pexels.com/photos/36496927/pexels-photo-36496927.jpeg?auto=compress&cs=tinysrgb&w=900 900w" sizes="(max-width: 760px) 100vw, 1040px" src="https://images.pexels.com/photos/36496927/pexels-photo-36496927.jpeg?auto=compress&cs=tinysrgb&w=900" alt="Programmer typing code on a laptop in an office workspace" width="1400" height="933" loading="eager" fetchpriority="high" decoding="async">
@@ -148,6 +148,29 @@
 <p>Once you know cost per completed task, you can decide what to include in each subscription tier. A base allowance with metered overages can make costs more predictable for both sides. A credit system can work when tasks have different costs, but explain what a credit represents. Avoid unlimited usage unless you have evidence that heavy users remain profitable.</p>
 <p>For the next step, read our guide to <a href="/pricing-ai-features-saas/">pricing an AI feature without losing your margins</a>. It covers hybrid plans and how to think about allowances and overages.</p>
 
+<h2>Build an API cost model from real product usage</h2>
+<p>A pricing-page estimate is only a starting point. A production budget should be based on the work your product actually performs. Two customers who send the same number of requests can create very different bills if one sends longer documents, triggers more tool calls, uses audio or image inputs, or requires repeated attempts.</p>
+<p>For each product workflow, record a representative sample of requests and capture the provider-reported usage for every call. At minimum, keep these fields in your measurement table:</p>
+<table><thead><tr><th>Field</th><th>Why to record it</th></tr></thead><tbody>
+<tr><td>Workflow and task type</td><td>Separates unlike workloads, such as summarization, extraction, support replies and agent actions.</td></tr>
+<tr><td>Model and service tier</td><td>Prices and capabilities differ by model, endpoint and processing option.</td></tr>
+<tr><td>Input, output and cached tokens</td><td>These can be billed at different rates; do not combine them into one token count.</td></tr>
+<tr><td>Tool and external service calls</td><td>Search, retrieval, code execution, storage and third-party APIs may add separate charges.</td></tr>
+<tr><td>Retries and failed requests</td><td>Failed or repeated work can still consume billable usage.</td></tr>
+<tr><td>Latency and quality outcome</td><td>A cheaper request is not a saving if it causes more retries, errors or human correction.</td></tr>
+<tr><td>Customer or plan segment</td><td>Helps identify whether a small group of high-usage customers drives most variable cost.</td></tr>
+</tbody></table>
+<h2>Use percentiles, not only an average request</h2>
+<p>An average can hide expensive customers and unusually large tasks. Calculate at least the median (p50) and 95th percentile (p95) cost for each important workflow. Use p50 to understand a typical request and p95 to stress-test allowances, rate limits and margin exposure. Also inspect the largest outliers individually; they may be legitimate workloads or bugs such as oversized context, repeated retries or an uncontrolled loop.</p>
+<p>For a monthly estimate, segment usage by plan or customer cohort. Multiply the expected number of tasks in each segment by its measured unit cost, then add fixed platform costs separately. Keep a low, expected and high scenario, and make the assumptions visible so the forecast can be updated when usage changes.</p>
+<h2>Separate model cost from total feature cost</h2>
+<p>For a product decision, the relevant number is rarely just the model invoice. A more complete contribution-cost view is:</p>
+<div class="answer"><strong>Estimated feature cost</strong><p>Model usage + paid tools and external APIs + retrieval and storage + allocated infrastructure + human review or support attributable to the feature.</p></div>
+<p>Keep one-time engineering work and general company overhead separate from variable serving cost. They matter to product economics, but mixing them into a per-request estimate can make comparisons misleading. If you allocate shared infrastructure, document the allocation method and apply it consistently across features.</p>
+<h2>Run a model-change test before calling it a saving</h2>
+<p>When comparing a cheaper model or a shorter prompt, use the same representative test set for both versions. Compare cost per accepted result, not just cost per call. Include task success, factual errors, format validity, latency, retry rate and human correction. A lower token bill can be a false economy if output quality falls and creates extra work downstream.</p>
+<p>For every pricing snapshot, record the provider, model name, endpoint, billing unit, currency, date checked and source URL. Provider rates and model names change, so link directly to the current official pricing page rather than copying a price into an article without a review date. See the official <a href="https://developers.openai.com/api/docs/pricing" rel="noopener">OpenAI API pricing</a> and <a href="https://platform.claude.com/docs/en/about-claude/pricing" rel="noopener">Anthropic API pricing</a> documentation before budgeting a live workload.</p>
+<p>For multi-step workflows, use our companion guide to <a href="/ai-agent-cost-per-task/">estimating AI agent cost per successful task</a>. For the product decision after cost measurement, see <a href="/pricing-ai-features-saas/">how to price AI features in a SaaS product</a>.</p>
 <h2>Frequently asked questions</h2>
 <h3>How do I calculate the cost of one AI API request?</h3>
 <p>Multiply input tokens by the input rate and output tokens by the output rate, using the provider's published units. Add any billable tools, media or other features. Check actual usage data from the API response.</p>
