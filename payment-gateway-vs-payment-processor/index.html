@@ -5,15 +5,15 @@
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());</script>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Payment Gateway vs Processor: Key Differences | Stackwire</title>
-<meta name="description" content="Learn the difference between a payment gateway and payment processor, how an online card payment works, what a PSP does, and what businesses should compare.">
+<title>Payment Gateway vs Payment Processor: Differences &amp; Fees | Stackwire</title>
+<meta name="description" content="Compare payment gateways and processors, see how card payments move, understand common gateway fees, and choose the right setup for your business.">
 <meta name="robots" content="index, follow, max-image-preview:large">
 <meta name="theme-color" content="#14213D">
 <link rel="canonical" href="https://www.stackwiremedia.com/payment-gateway-vs-payment-processor/">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="Stackwire">
-<meta property="og:title" content="Payment Gateway vs Processor: Key Differences">
+<meta property="og:title" content="Payment Gateway vs Payment Processor: Differences &amp; Fees">
 <meta property="og:description" content="A practical guide to payment gateways, processors, PSPs and the steps behind an online card payment.">
 <meta property="og:url" content="https://www.stackwiremedia.com/payment-gateway-vs-payment-processor/">
 <meta property="og:image" content="https://images.pexels.com/photos/10330109/pexels-photo-10330109.jpeg?auto=compress&cs=tinysrgb&w=900">
@@ -23,7 +23,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800&family=Source+Sans+3:wght@400;500;600&display=swap" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800&family=Source+Sans+3:wght@400;500;600&display=swap"></noscript>
 <link rel="stylesheet" href="/style.css">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Payment Gateway vs Payment Processor: What's the Difference?","description":"A practical guide to payment gateways, processors, PSPs and the steps behind an online card payment.","datePublished":"2026-11-09","dateModified":"2026-11-22","inLanguage":"en","mainEntityOfPage":"https://www.stackwiremedia.com/payment-gateway-vs-payment-processor/","url":"https://www.stackwiremedia.com/payment-gateway-vs-payment-processor/","articleSection":"Finance and fintech","publisher":{"@type":"Organization","name":"Stackwire","url":"https://www.stackwiremedia.com/"},"image":"https://images.pexels.com/photos/10330109/pexels-photo-10330109.jpeg?auto=compress&cs=tinysrgb&w=900","author":{"@type":"Organization","name":"Stackwire","url":"https://www.stackwiremedia.com/about/"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Payment Gateway vs Payment Processor: Differences and Fees","description":"A practical guide to payment gateways, processors, PSPs and the steps behind an online card payment.","datePublished":"2026-11-09","dateModified":"2026-11-22","inLanguage":"en","mainEntityOfPage":"https://www.stackwiremedia.com/payment-gateway-vs-payment-processor/","url":"https://www.stackwiremedia.com/payment-gateway-vs-payment-processor/","articleSection":"Finance and fintech","publisher":{"@type":"Organization","name":"Stackwire","url":"https://www.stackwiremedia.com/"},"image":"https://images.pexels.com/photos/10330109/pexels-photo-10330109.jpeg?auto=compress&cs=tinysrgb&w=900","author":{"@type":"Organization","name":"Stackwire","url":"https://www.stackwiremedia.com/about/"}}</script>
 <link rel="preload" as="image" href="https://images.pexels.com/photos/10330109/pexels-photo-10330109.jpeg?auto=compress&cs=tinysrgb&w=900" fetchpriority="high">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Is a payment gateway the same as a payment processor?","acceptedAnswer":{"@type":"Answer","text":"No. A gateway securely captures and transmits payment information from checkout. A processor handles transaction processing and communications through the payment ecosystem. Some providers offer both in one platform."}},{"@type":"Question","name":"Can I use a payment gateway without a processor?","acceptedAnswer":{"@type":"Answer","text":"A gateway alone does not complete a card payment. The transaction still needs processing through an acquirer, processor or integrated payment provider. A gateway vendor may connect you to those services through partners."}},{"@type":"Question","name":"Is PayPal a payment gateway or a payment processor?","acceptedAnswer":{"@type":"Answer","text":"Product descriptions can cover several roles. PayPal offers a range of payment products, and the functions included depend on the product and market. Check the specific service documentation and agreement to see whether gateway, processing and other services are bundled."}},{"@type":"Question","name":"What is the difference between a PSP and a payment gateway?","acceptedAnswer":{"@type":"Answer","text":"A gateway is one component that securely transmits payment data. A PSP is a broader provider that may combine gateway, processing, acquiring, payment methods, risk tools and other services."}},{"@type":"Question","name":"Does a payment gateway handle refunds and chargebacks?","acceptedAnswer":{"@type":"Answer","text":"It depends on the product. A gateway or payment dashboard may provide buttons and APIs for refunds or dispute information, but the actual refund and dispute processes involve the payment provider, acquirer, card network and banks. Confirm who is responsible for each step."}},{"@type":"Question","name":"Which is better for a small business?","acceptedAnswer":{"@type":"Answer","text":"Many small businesses prefer an integrated PSP because it can reduce setup and vendor management. The right choice depends on supported countries and payment methods, total fees, payout terms, integration needs and support quality."}}]}</script>
 </head>
@@ -37,7 +37,7 @@
 <main id="top">
 <article class="wrap art">
 <p class="tag">Finance and fintech</p>
-<h1>Payment gateway vs payment processor: what's the difference?</h1>
+<h1>Payment gateway vs payment processor: key differences and fees</h1>
 <p class="meta">Published by Stackwire. Published 9 November 2026. Updated 22 November 2026.</p>
 <p class="lede">A payment gateway securely captures and passes payment details. A payment processor handles the transaction communications that help move a payment through banks and card networks. Many modern providers bundle both jobs, which is why the terms are often confused.</p>
 <figure class="stock-photo">
@@ -104,6 +104,18 @@
 <tr><td>Disputes and support</td><td>Who provides evidence tools, chargeback notifications and support when a payment fails or is disputed?</td></tr>
 <tr><td>Exit and portability</td><td>Can you export customer tokens or payment records where permitted? What happens if you change providers?</td></tr>
 </tbody></table>
+
+<h2>Payment gateway fees: what do businesses pay?</h2>
+<p>Payment gateway fees are not always the same as the full cost of processing a card payment. A gateway provider may charge separately for access to its checkout technology, while a bundled payment service provider may include gateway functionality in a broader processing price. The contract and pricing schedule determine what is included.</p>
+<table><thead><tr><th>Possible charge</th><th>What to check</th></tr></thead><tbody>
+<tr><td>Gateway or platform fee</td><td>Is there a monthly, annual or account fee for using the gateway?</td></tr>
+<tr><td>Per-transaction gateway fee</td><td>Is a separate fixed charge added for each transaction, on top of processor pricing?</td></tr>
+<tr><td>Setup or integration fee</td><td>Are onboarding, configuration, migration or custom integration services charged separately?</td></tr>
+<tr><td>Optional features</td><td>Do tokenization, recurring billing, fraud tools, network connections or additional reporting carry extra charges?</td></tr>
+<tr><td>International and currency costs</td><td>Are cross-border, multi-currency or currency-conversion charges billed by the gateway, processor or another provider?</td></tr>
+</tbody></table>
+<p>Ask each provider for an itemized quote that separates gateway, processing, acquiring, network, currency-conversion and dispute costs where applicable. Then model the total against your own transaction volume, average order value, card mix and customer locations. A low gateway fee does not necessarily mean a low total payment cost, and a bundled price is not automatically more expensive.</p>
+<p>For the wider acquiring relationship and how settled funds reach a business, see our guide to <a href="/merchant-account/">merchant accounts</a>. For a deeper look at processor pricing models, read <a href="/choosing-a-payment-processor/">how to choose a payment processor</a>.</p>
 
 <h2>Example: choosing between separate services and an all-in-one PSP</h2>
 <p>Imagine a growing online retailer that already uses a checkout platform but wants to change how card payments are routed. It could keep its current gateway and connect a different processor, if the contracts and integrations support that setup. Alternatively, it could move to a PSP that bundles checkout, processing and acquiring services.</p>
