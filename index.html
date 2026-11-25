@@ -113,15 +113,15 @@
   function loadAd(){
     if(!slot || slot.getAttribute('data-ad-loaded')==='true') return;
     slot.setAttribute('data-ad-loaded','true');
-    var container=document.createElement('div');
-    container.id='container-'+zone;
-    slot.appendChild(container);
     var script=document.createElement('script');
     script.async=true;
     script.setAttribute('fetchpriority','high');
     script.setAttribute('data-cfasync','false');
     script.src='https://bauval.org/21/'+zone;
-    document.head.appendChild(script);
+    var container=document.createElement('div');
+    container.id='container-'+zone;
+    slot.appendChild(script);
+    slot.appendChild(container);
   }
   function choose(value){
     var wasAccepted=false;
