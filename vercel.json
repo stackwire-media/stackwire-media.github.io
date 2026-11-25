@@ -99,6 +99,11 @@
       "source": "/write-for-us.html",
       "destination": "/write-for-us/",
       "permanent": true
+    },
+    {
+      "source": "/claude-code-vs-cursor.html",
+      "destination": "/claude-code-vs-cursor/",
+      "permanent": true
     }
   ],
   "rewrites": [
