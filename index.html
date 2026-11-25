@@ -76,6 +76,10 @@
 <a class="category-card ai-card" href="/saas-ai/"><img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=900&q=72" alt="Server racks in a modern data centre" loading="lazy"><div><h3>SaaS &amp; AI</h3><p>SaaS growth, AI tools, AI agents and practical implementation.</p><b>Explore articles <span aria-hidden="true">→</span></b></div></a>
 </div>
 </section>
+<section class="home-wrap" aria-label="Advertisement" style="margin:28px auto 36px;max-width:1240px">
+  <div id="stackwire-ad-slot" style="min-height:90px;display:flex;align-items:center;justify-content:center"></div>
+  <p style="margin:6px 0 0;text-align:center;font-size:11px;color:#626b78">Advertisement</p>
+</section>
 <section class="home-wrap latest-section" id="latest" aria-labelledby="latest-heading">
 <div class="section-heading"><h2 id="latest-heading">Latest Articles</h2><span></span><a href="/search.html">View all articles <b aria-hidden="true">→</b></a></div>
 <div class="latest-grid">
@@ -88,6 +92,54 @@
 <section class="contribute-band"><div class="home-wrap"><div><p class="eyebrow">Contribute to Stackwire</p><h2>Have useful experience to share?</h2><p>We welcome practical, original contributions from people working across finance, crypto and software.</p></div><a class="secondary-button" href="/write-for-us/">Read our contributor guidelines <span aria-hidden="true">→</span></a></div></section>
 </main>
 <footer class="home-footer"><div class="home-wrap footer-inner"><a class="footer-brand" href="/">Stackwire <small>MEDIA</small></a><div class="footer-links"><a href="/about/">About</a><a href="/contact/">Contact</a><a href="/privacy/">Privacy</a><a href="/editorial-policy/">Editorial standards</a><a href="/write-for-us/">Write for us</a></div><p>Content on Stackwire is for information only and is not financial, legal or investment advice.</p><small>© Stackwire Media</small></div></footer>
+<div id="stackwire-cookie-notice" role="dialog" aria-label="Advertising cookie choices" aria-live="polite" style="display:none;position:fixed;z-index:9999;left:16px;right:16px;bottom:16px;max-width:760px;margin:0 auto;padding:18px;background:#fff;border:1px solid #d8dce3;border-radius:12px;box-shadow:0 8px 32px rgba(0,0,0,.18);color:#172033">
+  <p style="margin:0 0 10px;font-weight:700">Your advertising choices</p>
+  <p style="margin:0 0 14px;font-size:14px;line-height:1.5">Stackwire uses Adsterra to display ads. Adsterra and its advertising partners may use device information, IP address, cookies or similar technologies to deliver and measure advertising. Choose whether to load this ad. Read our <a href="/privacy/">Privacy Policy</a> and <a href="https://adsterra.com/privacy-policy-managed/" target="_blank" rel="noopener noreferrer">Adsterra's Privacy Policy</a>.</p>
+  <div style="display:flex;flex-wrap:wrap;gap:8px">
+    <button type="button" id="stackwire-ad-accept" style="padding:9px 16px;border:0;border-radius:6px;background:#172033;color:#fff;font:inherit;font-weight:700;cursor:pointer">Accept advertising</button>
+    <button type="button" id="stackwire-ad-reject" style="padding:9px 16px;border:1px solid #9aa3b2;border-radius:6px;background:#fff;color:#172033;font:inherit;font-weight:600;cursor:pointer">Reject</button>
+  </div>
+</div>
+<button type="button" id="stackwire-cookie-settings" style="position:fixed;z-index:9998;left:12px;bottom:12px;padding:7px 10px;border:1px solid #d8dce3;border-radius:6px;background:#fff;color:#172033;font-size:12px;font-family:inherit;cursor:pointer">Cookie settings</button>
+<script>
+(function(){
+  var key='stackwire_ad_consent_v1';
+  var notice=document.getElementById('stackwire-cookie-notice');
+  var accept=document.getElementById('stackwire-ad-accept');
+  var reject=document.getElementById('stackwire-ad-reject');
+  var settings=document.getElementById('stackwire-cookie-settings');
+  var slot=document.getElementById('stackwire-ad-slot');
+  var zone='7523163e00f575bcac5989adcb8746b8';
+  function loadAd(){
+    if(!slot || slot.getAttribute('data-ad-loaded')==='true') return;
+    slot.setAttribute('data-ad-loaded','true');
+    var container=document.createElement('div');
+    container.id='container-'+zone;
+    slot.appendChild(container);
+    var script=document.createElement('script');
+    script.async=true;
+    script.setAttribute('fetchpriority','high');
+    script.setAttribute('data-cfasync','false');
+    script.src='https://bauval.org/21/'+zone;
+    document.head.appendChild(script);
+  }
+  function choose(value){
+    var wasAccepted=false;
+    try{wasAccepted=localStorage.getItem(key)==='accepted';localStorage.setItem(key,value);}catch(e){}
+    notice.style.display='none';
+    if(value==='accepted') loadAd();
+    else if(wasAccepted){window.location.reload();}
+    else if(slot) slot.innerHTML='';
+  }
+  var saved=null;
+  try{saved=localStorage.getItem(key);}catch(e){}
+  if(saved==='accepted') loadAd();
+  else if(saved!=='rejected') notice.style.display='block';
+  accept.addEventListener('click',function(){choose('accepted');});
+  reject.addEventListener('click',function(){choose('rejected');});
+  settings.addEventListener('click',function(){notice.style.display='block';});
+}());
+</script>
 <script>
 (function(){var button=document.querySelector('.menu-toggle');var nav=document.querySelector('.primary-nav');if(button&&nav){button.addEventListener('click',function(){var open=button.getAttribute('aria-expanded')==='true';button.setAttribute('aria-expanded',String(!open));nav.classList.toggle('is-open',!open);});}}());
 </script>
