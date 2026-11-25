@@ -100,7 +100,7 @@
     <button type="button" id="stackwire-ad-reject" style="padding:9px 16px;border:1px solid #9aa3b2;border-radius:6px;background:#fff;color:#172033;font:inherit;font-weight:600;cursor:pointer">Reject</button>
   </div>
 </div>
-<button type="button" id="stackwire-cookie-settings" style="position:fixed;z-index:9998;left:12px;bottom:12px;padding:7px 10px;border:1px solid #d8dce3;border-radius:6px;background:#fff;color:#172033;font:12px inherit;cursor:pointer">Cookie settings</button>
+<button type="button" id="stackwire-cookie-settings" style="position:fixed;z-index:9998;left:12px;bottom:12px;padding:7px 10px;border:1px solid #d8dce3;border-radius:6px;background:#fff;color:#172033;font-size:12px;font-family:inherit;cursor:pointer">Cookie settings</button>
 <script>
 (function(){
   var key='stackwire_ad_consent_v1';
@@ -124,9 +124,11 @@
     document.head.appendChild(script);
   }
   function choose(value){
-    try{localStorage.setItem(key,value);}catch(e){}
+    var wasAccepted=false;
+    try{wasAccepted=localStorage.getItem(key)==='accepted';localStorage.setItem(key,value);}catch(e){}
     notice.style.display='none';
     if(value==='accepted') loadAd();
+    else if(wasAccepted){window.location.reload();}
     else if(slot) slot.innerHTML='';
   }
   var saved=null;
