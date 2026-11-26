@@ -106,73 +106,38 @@
 </table>
 <p>Not every provider charges every item. Some rates also vary by payment method, online versus in-person acceptance, plan, card origin, or negotiated pricing.</p>
 <h2 id="published-us-online-payment-prices-to-compare">Published US online payment prices to compare</h2>
-<p>These examples are taken from provider pricing pages checked on <strong>November 26, 2026</strong>. They are not identical products: the bundled rates below include payment processing, while Authorize.net’s Gateway Only plan is a separate gateway charge and requires a merchant account for card acceptance. Confirm current terms and eligibility with the provider before signing up.</p>
+<p>These examples use publicly listed US prices checked on <strong>November 26, 2026</strong>. They cover different products, so read the scope column before comparing them. Bundled rates include payment processing; a gateway-only fee does not. Prices can vary by plan, eligibility, payment method, and contract.</p>
 <table>
-<thead>
-<tr>
-<th>Provider and example plan</th>
-<th>Published price for the example</th>
-<th>Important scope</th>
-</tr>
-</thead>
+<thead><tr><th>Provider and plan</th><th>Published online price</th><th>What the price includes</th></tr></thead>
 <tbody>
-<tr>
-<td>Stripe, standard online domestic cards</td>
-<td>2.9% + $0.30 per successful transaction</td>
-<td>Standard pricing lists no setup or monthly fee. Manually entered cards, international cards, and currency conversion can add fees. <a href="https://stripe.com/pricing?locale=en-US">Official pricing</a></td>
-</tr>
-<tr>
-<td>Square Free, online or invoices</td>
-<td>3.3% + $0.30 per payment</td>
-<td>Square lists a different online API rate and different fees for paid plans and other payment types. <a href="https://squareup.com/help/us/en/article/5068-what-are-square-s-fees">Official fee schedule</a></td>
-</tr>
-<tr>
-<td>PayPal, standard credit and debit card payments</td>
-<td>2.99% + $0.49 per transaction</td>
-<td>PayPal rates vary by checkout product and payment type; PayPal Checkout and other methods can have different prices. <a href="https://www.paypal.com/us/business/paypal-business-fees">Official merchant fee schedule</a></td>
-</tr>
-<tr>
-<td>Authorize.net, Gateway Only</td>
-<td>$25 per month + $0.10 per credit card transaction + $0.10 per settled batch</td>
-<td>This is the gateway charge. A separate merchant account and processing arrangement are needed. Its all-in-one offer has different pricing and eligibility. <a href="https://www.authorize.net/sign-up/pricing.html">Official pricing</a></td>
-</tr>
+<tr><td>Stripe, standard domestic cards</td><td>2.9% + $0.30 per successful transaction</td><td>Bundled card processing and gateway access. No standard setup or monthly fee. International cards and currency conversion can add charges. <a href="https://stripe.com/pricing?locale=en-US">Official pricing</a></td></tr>
+<tr><td>Square Free, online or invoices</td><td>3.3% + $0.30</td><td>Bundled processing for online/invoice payments. Square Online API pricing is different (2.9% + $0.30). <a href="https://squareup.com/help/us/en/article/5068-what-are-square-s-fees">Official fee schedule</a></td></tr>
+<tr><td>PayPal Expanded Checkout, cards</td><td>2.89% + $0.29</td><td>Bundled card processing. PayPal Checkout payments, Venmo, invoicing, and manually entered payments have different rates. <a href="https://www.paypal.com/us/business/fees">Official pricing</a></td></tr>
+<tr><td>PayPal Checkout, cards</td><td>2.99% + $0.49</td><td>A separate PayPal checkout product and rate; do not substitute the Expanded Checkout price. <a href="https://www.paypal.com/us/business/paypal-business-fees">Official merchant fee schedule</a></td></tr>
+<tr><td>Authorize.net, All-in-One</td><td>$25/month + 2.9% + $0.30</td><td>Includes a merchant account and gateway, subject to eligibility. <a href="https://www.authorize.net/sign-up/pricing.html">Official pricing</a></td></tr>
+<tr><td>Authorize.net, Gateway Only</td><td>$25/month + $0.10 per transaction + $0.10 per daily batch</td><td>Gateway service only. You need a separate merchant account and processing agreement; their costs are not included. <a href="https://www.authorize.net/sign-up/pricing.html">Official pricing</a></td></tr>
+<tr><td>Helcim, keyed and online</td><td>Interchange + 0.50% + $0.25 at $0–$50K monthly volume</td><td>Interchange-plus pricing: the underlying interchange varies by card and transaction. Helcim publishes lower markups at higher monthly volumes, so there is no single all-in rate. <a href="https://www.helcim.com/pricing/">Official pricing</a></td></tr>
+<tr><td>Adyen, US Visa and Mastercard</td><td>$0.13 + Interchange++ + 0.60%</td><td>Interchange and scheme fees are passed through; the total depends on the actual cards and transactions. <a href="https://www.adyen.com/pricing/">Official pricing</a></td></tr>
 </tbody>
 </table>
-<p>This table is a starting point, not a ranking. For example, a bundled plan’s percentage-plus-fixed rate cannot be compared directly with a standalone gateway’s monthly and per-transaction charges until you add the separate processor and acquiring costs.</p>
-<h2 id="example-estimate-fees-on-10000-in-monthly-online-card-sales">Example: estimate fees on $10,000 in monthly online card sales</h2>
-<p>Suppose a business makes <strong>100 successful domestic online card transactions</strong> totaling <strong>$10,000</strong> in one month. That is an average transaction of $100. Using only the published example rates above:</p>
+<p><strong>Important distinction:</strong> Stripe, Square, PayPal, and Authorize.net All-in-One publish bundled or all-in-one processing prices. Authorize.net Gateway Only publishes a gateway charge, not the full cost of accepting a card. Helcim and Adyen use interchange-based pricing, so their percentage markup is not the same as a flat all-in rate.</p>
+<h2 id="example-estimate-fees-at-different-monthly-sales-volumes">Example: estimate fees at different monthly sales volumes</h2>
+<p>To make the flat-rate examples easier to compare, assume an average $100 successful domestic online card payment. That means 100 transactions at $10,000 in sales, 500 at $50,000, and 1,000 at $100,000. The estimates below apply the published percentage and fixed fee only; they exclude refunds, disputes, international cards, currency conversion, taxes, and optional products.</p>
 <table>
-<thead>
-<tr>
-<th>Example rate</th>
-<th>Calculation</th>
-<th style="text-align: right;">Estimated monthly charge in this example</th>
-</tr>
-</thead>
+<thead><tr><th>Example plan</th><th>$10,000 / 100 transactions</th><th>$50,000 / 500 transactions</th><th>$100,000 / 1,000 transactions</th></tr></thead>
 <tbody>
-<tr>
-<td>Stripe standard domestic online cards</td>
-<td>2.9% × $10,000 + $0.30 × 100</td>
-<td style="text-align: right;">$320</td>
-</tr>
-<tr>
-<td>Square Free online or invoice payments</td>
-<td>3.3% × $10,000 + $0.30 × 100</td>
-<td style="text-align: right;">$360</td>
-</tr>
-<tr>
-<td>PayPal standard credit and debit cards</td>
-<td>2.99% × $10,000 + $0.49 × 100</td>
-<td style="text-align: right;">$348</td>
-</tr>
-<tr>
-<td>Authorize.net Gateway Only</td>
-<td>$25 + ($0.10 × 100) + ($0.10 × 30 daily batches)</td>
-<td style="text-align: right;">$38 in gateway charges, <strong>plus separate processing and merchant-account fees</strong></td>
-</tr>
+<tr><td>Stripe, 2.9% + $0.30</td><td>$320</td><td>$1,600</td><td>$3,200</td></tr>
+<tr><td>Square Free online, 3.3% + $0.30</td><td>$360</td><td>$1,800</td><td>$3,600</td></tr>
+<tr><td>PayPal Expanded Checkout cards, 2.89% + $0.29</td><td>$318</td><td>$1,590</td><td>$3,180</td></tr>
+<tr><td>PayPal Checkout cards, 2.99% + $0.49</td><td>$348</td><td>$1,740</td><td>$3,480</td></tr>
+<tr><td>Authorize.net All-in-One, $25/month + 2.9% + $0.30</td><td>$345</td><td>$1,625</td><td>$3,225</td></tr>
 </tbody>
 </table>
-<p>The example assumes one settled batch on each of 30 days and excludes refunds, disputes, international cards, currency conversion, optional services, taxes, plan subscriptions, and any separately billed processing or acquiring costs. The Authorize.net figure is <strong>not</strong> a total cost of accepting cards; it shows only its stated gateway charges under these assumptions. Your statement and contract determine your actual bill.</p>
+<p>These are arithmetic estimates, not quotes or a recommendation. The PayPal rows represent different products and should not be blended into one rate. Square Free's online/invoice rate is used here, not its separate Online API rate. Authorize.net's All-in-One monthly fee is included. The gateway-only plan is intentionally not in this all-in table because its separate processor and merchant-account costs are unknown.</p>
+<h3 id="how-interchange-plus-changes-the-comparison">How interchange-plus changes the comparison</h3>
+<p>Helcim and Adyen cannot be assigned one honest all-in total from a headline markup alone. Interchange depends on factors such as card type, issuing country, transaction environment, and card network. For Helcim, the published US keyed and online markup starts at interchange + 0.50% + $0.25 for merchants processing up to $50,000 per month, then steps down at higher volume tiers. Adyen lists $0.13 + interchange++ + 0.60% for Visa and Mastercard. Ask for a quote using your actual card mix and compare the final effective rate on a statement.</p>
+<h3 id="gateway-only-fee-example">What does a gateway-only fee look like?</h3>
+<p>Authorize.net lists Gateway Only at $25 per month, $0.10 per transaction, and a $0.10 daily batch fee. If a business processes 100 transactions across 30 settled daily batches, those gateway charges total $38 for the month: $25 + $10 + $3. This is <strong>not</strong> the total processing cost. Add the separate merchant account, interchange, processor markup, and any other applicable fees before comparing it with an all-in-one provider.</p>
 <h2 id="how-to-calculate-your-actual-payment-cost">How to calculate your actual payment cost</h2>
 <p>Use a recent merchant statement and calculate the effective rate for the same period:</p>
 <p><strong>Effective rate = total payment-related fees ÷ total card sales × 100</strong></p>
@@ -208,6 +173,8 @@
 <li><a href="https://squareup.com/help/us/en/article/5068-what-are-square-s-fees" target="_blank" rel="noopener noreferrer">Square US fee schedule</a> - online, API, and plan-specific fees.</li>
 <li><a href="https://www.paypal.com/us/business/paypal-business-fees" target="_blank" rel="noopener noreferrer">PayPal US merchant fee schedule</a> - rates by transaction and payment type.</li>
 <li><a href="https://www.authorize.net/sign-up/pricing.html" target="_blank" rel="noopener noreferrer">Authorize.net pricing</a> - gateway-only and all-in-one plans.</li>
+<li><a href="https://www.helcim.com/pricing/" target="_blank" rel="noopener noreferrer">Helcim pricing</a> - keyed and online interchange-plus markups by monthly volume.</li>
+<li><a href="https://www.adyen.com/pricing/" target="_blank" rel="noopener noreferrer">Adyen pricing</a> - interchange++ and payment-method pricing.</li>
 </ul>
 <p class="note">Provider rates above were checked on 26 November 2026. Recheck the official pricing pages before relying on them because rates and terms can change.</p>
 </article>
