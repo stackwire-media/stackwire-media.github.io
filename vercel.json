@@ -104,6 +104,11 @@
       "source": "/claude-code-vs-cursor.html",
       "destination": "/claude-code-vs-cursor/",
       "permanent": true
+    },
+    {
+      "source": "/payment-gateway-fees.html",
+      "destination": "/payment-gateway-fees/",
+      "permanent": true
     }
   ],
   "rewrites": [
